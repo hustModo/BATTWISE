@@ -1,0 +1,8 @@
+- Consider adaptive bandwidth selection based on data statistics (median, quantiles)
+- Multi-scale kernels can capture both local and global distribution differences
+- Normalizing input features (Current, Voltage) may improve stability
+- Weighted kernel combinations could emphasize certain scales
+- Data-driven bandwidth estimation (e.g., median heuristic) often works well
+- Consider robustness to outliers in battery charging curves
+- Exponential kernel is sensitive to bandwidth choice - use multiple scales
+- Feature-wise bandwidth selection may be beneficial for heterogeneous features (Current vs Voltage)

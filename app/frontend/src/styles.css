@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.card {
+  @apply bg-white rounded-card shadow-card border border-slate-100;
+}
+
+/* Slightly wider + always-visible thumb so users actually see they can scroll.
+   Was 6px transparent-track; users reported that long timelines looked
+   "cut off" because the inner scrollbar was nearly invisible. */
+.scrollbar-thin::-webkit-scrollbar { width: 9px; height: 9px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 5px; border: 2px solid transparent; background-clip: padding-box; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #64748b; background-clip: padding-box; }
+.scrollbar-thin::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 5px; }
+/* Firefox */
+.scrollbar-thin { scrollbar-width: thin; scrollbar-color: #94a3b8 #f1f5f9; }
+
+/* Subtle wire animation between pipeline nodes */
+.pipeline-wire {
+  background: linear-gradient(90deg, #94a3b8 0 50%, #0EA5A4 50% 100%);
+  background-size: 200% 100%;
+  animation: wire-flow 2.2s linear infinite;
+}
+@keyframes wire-flow {
+  from { background-position: 100% 0; }
+  to   { background-position: -100% 0; }
+}

@@ -1,0 +1,37 @@
+The MMD (Maximum Mean Discrepancy) calculation function is designed to quantify the distribution difference between battery charging curves. In battery recycling, internal feature differences manifest in charging curve variations (current and voltage data differences).
+
+Input Data:
+  xs: Source domain data (battery cell data), shape (n_samples, 2) where columns are [Current, Voltage]
+  xt: Target domain data (model/reference data), shape (n_samples, 2) where columns are [Current, Voltage]
+
+Core Parameters to Optimize:
+  fix_sigma: Fixed sigma value for kernel bandwidth calculation
+    - If fix_sigma = 0, bandwidth is computed automatically from data
+    - If fix_sigma > 0, use this fixed value as base bandwidth
+  
+  kernel_mul: Bandwidth multiplier factor
+    - Controls the spacing between different kernel bandwidths
+    - Typical range: 1.5 - 3.0
+    - Larger values create more diverse kernel scales
+  
+  kernel_num: Number of kernels in the multi-kernel approach
+    - Determines how many Gaussian kernels with different bandwidths to combine
+    - Typical range: 3 - 10
+    - More kernels capture multi-scale distribution differences
+
+Optimization Objective:
+The MMD function should maximize the correlation between computed MMD loss and battery electrochemical features. The evaluation metric is the average absolute Pearson correlation coefficient (mean_sig) between MMD loss values and significant battery characteristics (P < 0.01).
+
+**Goal: Maximize mean_sig** (higher correlation means better discrimination of battery performance differences)
+
+Function Design Principles:
+1. The bandwidth calculation strategy significantly impacts MMD sensitivity
+2. Multi-kernel approach should balance local and global distribution differences  
+3. Consider adaptive bandwidth selection based on data characteristics
+4. Avoid numerical instability (division by zero, overflow in exponentials)
+5. The function should be robust across different battery datasets
+
+Key Insights:
+- Battery charging curves contain rich information about internal electrochemical processes
+- Distribution differences in Current-Voltage space correlate with degradation, capacity fade, and other features
+- Effective MMD calculation can serve as a powerful unsupervised metric for battery screening and classification

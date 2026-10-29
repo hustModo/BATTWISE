@@ -1,0 +1,2 @@
+# Optional deep-representation dependencies; see docs/INSTALL.md.
+-r ../../requirements-benchmark.txt

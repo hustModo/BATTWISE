@@ -1,0 +1,16 @@
+# Battery MMD - back_0.5_200数据集配置
+problem_name: battery_mmd
+problem_type: function_optimization
+obj_type: max
+problem_size: null
+func_name: calculate_mmd
+description: Battery MMD optimization using back_0.5_200 dataset
+
+# 电池数据配置 - back_0.5_200数据集
+data_folder: problems/dianchi02/back_0.5_200
+model_filename: Model_back_0.5.xlsx
+char_filename: Charging_curve_characteristics.xlsx
+row_start: 0
+row_end: null
+p_value_threshold: 0.01
+verbose_eval: false

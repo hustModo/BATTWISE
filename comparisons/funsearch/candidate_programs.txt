@@ -1,0 +1,112 @@
+chatgpt
+{
+import numpy as np
+from scipy.spatial.distance import cdist
+
+def calculate_mmd_v2(xs: np.ndarray, xt: np.ndarray, fix_sigma: float = 0, kernel_mul: float = 2.0, kernel_num: int = 5) -> float:
+    s_num, t_num = xs.shape[0], xt.shape[0]
+    n_sam = s_num + t_num
+    x_combined = np.vstack((xs, xt))
+    
+    L2_distance = cdist(x_combined, x_combined, metric='euclidean') ** 2
+    
+    # Adaptive bandwidth using median of distances
+    if fix_sigma == 0:
+        bandwidth = np.median(L2_distance[L2_distance > 0]) / np.sqrt(2)
+    else:
+        bandwidth = fix_sigma
+    
+    bandwidth_list = [bandwidth * (kernel_mul ** i) for i in range(kernel_num)]
+    
+    K_matrix = sum(np.exp(-L2_distance / bw) for bw in bandwidth_list) / kernel_num
+    
+    MMD_loss = np.mean(K_matrix[:s_num, :s_num]) + np.mean(K_matrix[s_num:, s_num:]) - \
+               np.mean(K_matrix[:s_num, s_num:]) - np.mean(K_matrix[s_num:, :s_num])
+    
+    return MMD_loss
+}
+
+deepseek
+{
+import numpy as np
+from scipy.spatial.distance import cdist
+
+def calculate_mmd_v2(xs: np.ndarray, xt: np.ndarray, fix_sigma: float = 0, kernel_mul: float = 1.6, kernel_num: int = 7) -> float:
+    # Feature-wise normalization and median heuristic
+    x_combined = np.vstack((xs, xt))
+    feature_scales = np.median(np.abs(x_combined - np.median(x_combined, axis=0)), axis=0)
+    # 避免除以 0：将为 0 的 scale 替换为 1（不缩放该特征）
+    feature_scales = np.where(feature_scales == 0, 1, feature_scales)
+    xs_norm = xs / feature_scales
+    xt_norm = xt / feature_scales
+    
+    # Multi-scale bandwidth calculation using feature statistics
+    dists = cdist(np.vstack((xs_norm, xt_norm)), np.vstack((xs_norm, xt_norm)), 'euclidean')**2
+    if fix_sigma == 0:
+        median_dist = np.median(dists[np.triu_indices_from(dists, k=1)])
+        bandwidth = 0.5 * median_dist + 0.5 * np.mean(dists) / np.log(x_combined.shape[0]+1)
+    else:
+        bandwidth = fix_sigma
+        
+    # Weighted kernel combination (weights decay geometrically)
+    weights = np.array([1.0 / (2**i) for i in range(kernel_num)])
+    weights /= weights.sum()
+    kernel_val = np.zeros_like(dists)
+    for i, w in enumerate(weights):
+        bw = bandwidth * (kernel_mul**i)
+        kernel_val += w * np.exp(-dists / (bw + 1e-9))
+    
+    # Compute MMD with corrected diagonal handling
+    s_num = xs.shape[0]
+    ss = (np.sum(kernel_val[:s_num, :s_num]) - np.sum(np.diag(kernel_val[:s_num, :s_num]))) / (s_num*(s_num-1))
+    tt = (np.sum(kernel_val[s_num:, s_num:]) - np.sum(np.diag(kernel_val[s_num:, s_num:]))) / ((kernel_val.shape[0]-s_num)*((kernel_val.shape[0]-s_num)-1))
+    st = np.mean(kernel_val[:s_num, s_num:])
+    return ss + tt - 2*st
+}
+
+qwen
+{
+import numpy as np
+from scipy.spatial.distance import cdist
+
+def calculate_mmd_v2(xs: np.ndarray, xt: np.ndarray, fix_sigma: float = 0, kernel_mul: float = 1.5, kernel_num: int = 6) -> float:
+    s_num, t_num = xs.shape[0], xt.shape[0]
+    x_new = np.vstack((xs, xt))
+    L2_distance = cdist(x_new, x_new, 'euclidean') ** 2
+    if fix_sigma == 0:
+        median_distance = np.median(L2_distance[L2_distance != 0])
+        bandwidth = median_distance
+    else:
+        bandwidth = fix_sigma
+
+    bandwidths = [bandwidth * (kernel_mul ** i) for i in range(kernel_num)]
+    kernel_val_sum = sum(np.exp(-L2_distance / bw) for bw in bandwidths)
+    
+    ss = np.mean(kernel_val_sum[:s_num, :s_num])
+    tt = np.mean(kernel_val_sum[s_num:, s_num:])
+    st = np.mean(kernel_val_sum[:s_num, s_num:])
+    ts = np.mean(kernel_val_sum[s_num:, :s_num])
+    
+    return ss + tt - st - ts
+}
+
+gemini
+{
+import numpy as np
+from scipy.spatial.distance import cdist
+
+def calculate_mmd_v2(xs: np.ndarray, xt: np.ndarray, fix_sigma: float = 0, kernel_mul: float = 2.0, kernel_num: int = 5) -> float:
+    d_ss, d_tt, d_st = cdist(xs, xs)**2, cdist(xt, xt)**2, cdist(xs, xt)**2
+    if fix_sigma == 0:
+        med = np.median(d_st) if d_st.size > 0 else 1.0
+        bw = med / (kernel_mul ** (kernel_num // 2))
+    else: bw = fix_sigma
+    bws = [bw * (kernel_mul ** i) for i in range(kernel_num)]
+    
+    def k_sum(mat): return sum(np.exp(-mat / b).mean() for b in bws)
+    
+    # Feature-wise anisotropic scaling: weigh dimensions by their variance ratio
+    std_ratio = np.clip(np.std(xs, axis=0) / (np.std(xt, axis=0) + 1e-6), 0.5, 2.0)
+    mmd = k_sum(d_ss) + k_sum(d_tt) - 2 * k_sum(d_st * np.mean(std_ratio))
+    return float(max(mmd, 0))
+}

@@ -1,0 +1,88 @@
+# BATTWISE Reflective Metric Search configuration
+# Battery internal-state metric optimization
+
+# Hydra配置（禁用自动输出目录）
+defaults:
+  - _self_
+
+hydra:
+  output_subdir: null  # 禁用.hydra配置输出
+  run:
+    dir: .  # 运行目录设为当前目录，不创建时间戳目录
+
+# 算法选择
+algorithm: reflective_metric_search
+
+# LLM配置
+model: deepseek-v3 # 可选: gpt-4, gpt-3.5-turbo, qwen-turbo-latest等,deepseek-v3.2
+temperature: 1.0
+llm_max_workers: 20  # LLM并发调用数（与pop_size=20匹配，一批全部并发）
+llm_max_retries: 10  # LLM最大重试次数
+llm_timeout: 60      # 单次LLM请求超时（秒）
+max_fe: 50              # 最大迭代次数（generations）
+pop_size: 20            # 种群大小
+batch_size: 20          # 每次生成和评估的个体数量
+timeout: 200            # 评估超时时间（秒）
+n_proc: 10              # 并行评估进程数（电池数据评估较快，可适度减少）
+fast_eval: false        # 是否使用快速评估模式
+
+# Hierarchical reflection configuration
+reflection_enabled: true  # enable performance-guided reflection
+reflection_frequency: 5  # 每5代更新长期反思
+max_short_term_reflections: 20  # 保留最近20个短期反思
+operator_specific_guidance: true  # 启用算子特定指导
+performance_weighted: true  # 启用性能加权反思
+adaptive_operator_selection: true  # 启用自适应算子选择
+
+# EOH算子配置
+eoh_operators:
+  - e1  # 探索1：基于多个体生成全新MMD函数
+  - e2  # 探索2：交叉融合两个MMD函数
+  - m1  # 变异1：基于单个体变异MMD函数
+  - m2  # 变异2：参数级别变异
+
+# 算子初始权重
+operator_weights:
+  e1: 1.0  # 探索1：总是使用
+  e2: 0.5  # 探索2：50%概率使用
+  m1: 1.0  # 变异1：总是使用
+  m2: 1.0  # 变异2：总是使用
+
+# 问题配置
+problem:
+  problem_name: battery_mmd
+  description: "Battery MMD Function Optimization for Recycling Applications"
+  problem_size: null  # Not applicable
+  func_name: calculate_mmd
+  obj_type: max  # 最大化mean_sig（相关系数）
+  problem_type: function_optimization
+  
+  # 电池数据配置（这些配置已不再使用，由eval.py的CASE_CONFIGS控制）
+  # 保留用于向后兼容
+  data_folder: problems/dianchi02/CV  # 已弃用
+  model_filename: Model_CV_process.xlsx  # 已弃用
+  char_filename: Electrochemical_indicators.xlsx  # 已弃用
+  row_start: 0
+  row_end: null  # 使用全部数据
+  p_value_threshold: 1 # 显著性阈值
+  verbose_eval: false  # 是否输出详细评估日志
+
+# 案例选择配置
+# case_num: 案例编号或名称，支持以下格式：
+#   - [0] -> CV案例
+#   - [1] -> first_100s案例
+#   - [2] -> first_200s案例
+#   - [3] -> first_1000s案例
+#   - ["CV"] -> CV案例（直接使用名称）
+#   - ["first_100s"] -> first_100s案例（直接使用名称）
+#   - ["first_200s"] -> first_200s案例（直接使用名称）
+#   - ["first_1000s"] -> first_1000s案例（直接使用名称）
+case_num: [0]  # 默认使用CV案例
+
+# 日志配置
+log_level: INFO
+
+# 输出配置
+save_intermediate_results: true  # 保存中间结果
+save_reflections: true  # 保存反思记录
+output_dir: "./outputs/battery_mmd_cv"  # 输出目录（默认CV案例）

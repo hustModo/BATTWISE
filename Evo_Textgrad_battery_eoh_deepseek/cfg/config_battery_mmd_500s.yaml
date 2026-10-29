@@ -1,0 +1,75 @@
+# BATTWISE Reflective Metric Search - first_500s dataset
+# Battery MMD Function Optimization Configuration - first_500s Dataset
+
+# Hydra配置（禁用自动输出目录）
+defaults:
+  - _self_
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+# 算法选择
+algorithm: reflective_metric_search
+
+# LLM配置
+model: deepseek-v3
+temperature: 1.0
+llm_max_workers: 20
+llm_max_retries: 10
+llm_timeout: 60
+max_fe: 20
+pop_size: 20
+batch_size: 20
+timeout: 200
+n_proc: 10
+fast_eval: false
+
+# Hierarchical reflection configuration
+reflection_enabled: true
+reflection_frequency: 5
+max_short_term_reflections: 20
+operator_specific_guidance: true
+performance_weighted: true
+adaptive_operator_selection: true
+
+# EOH算子配置
+eoh_operators:
+  - e1
+  - e2
+  - m1
+  - m2
+
+operator_weights:
+  e1: 1.0
+  e2: 0.5
+  m1: 1.0
+  m2: 1.0
+
+# 问题配置
+problem:
+  problem_name: battery_mmd
+  description: "Battery MMD Function Optimization for Recycling Applications"
+  problem_size: null
+  func_name: calculate_mmd
+  obj_type: max
+  problem_type: function_optimization
+  data_folder: problems/dianchi02/first_500s
+  model_filename: Model_first_500s.xls
+  char_filename: Charging_curve_characteristics.xlsx
+  row_start: 0
+  row_end: null
+  p_value_threshold: 0.1
+  verbose_eval: false
+
+# 案例选择：first_500s
+case_num: [3]
+
+# 日志配置
+log_level: INFO
+
+# 输出配置
+save_intermediate_results: true
+save_reflections: true
+output_dir: "./outputs/battery_mmd_500s"

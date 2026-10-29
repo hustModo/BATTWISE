@@ -1,0 +1,1033 @@
+{
+  "release": "review-code-20261029",
+  "source_files": [
+    {
+      "path": "app/backend/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/agents/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/agents/base.py",
+      "source_scope": "current application",
+      "source_sha256": "5ebe9f6cf19c85653699f79c6d92ed2f67178244a8d32ba376b03cfc8695eecc"
+    },
+    {
+      "path": "app/backend/agents/chat_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "efc2bcac71e08cff848243dbf9ea46c8fca853f2ea666a379918b8cc328b6f38"
+    },
+    {
+      "path": "app/backend/agents/cluster_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "290f3a12a27b48c7dccad41b506d22be932a0dc3b39aef126c6585037505f23e"
+    },
+    {
+      "path": "app/backend/agents/compute_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "9e04902b6f64418ac51e0ddf19f7f21886eae04ed26850355ac0fb85ce21c976"
+    },
+    {
+      "path": "app/backend/agents/designer_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "902e01e8ce1291e1d455f15c32bc11b935f5cfd18adb53daac62f876e3e38a11"
+    },
+    {
+      "path": "app/backend/agents/refinement_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "31570da70cce2cd64a59148b71251bd1125a01f2dd74356efbca31a1e2ba436d"
+    },
+    {
+      "path": "app/backend/agents/router_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "df609fbdeddfd07371cbbbd173dd79da2ab9608ea71654165323f3ef1a42e546"
+    },
+    {
+      "path": "app/backend/api/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/api/rest.py",
+      "source_scope": "current application",
+      "source_sha256": "982ee9600223d35cbc6cf972100f29f3cf0b6b9b96d27df069a817b229e462bf"
+    },
+    {
+      "path": "app/backend/api/ws.py",
+      "source_scope": "current application",
+      "source_sha256": "a89f888652b0a051e66998cdc35705cc99c1152dceb3b50da1fdc03be9a89537"
+    },
+    {
+      "path": "app/backend/main.py",
+      "source_scope": "current application",
+      "source_sha256": "b0d18b66e83ee62beba1a244d992d48fe02ba9d230213efef7a965a1bc2d1d70"
+    },
+    {
+      "path": "app/backend/naming.py",
+      "source_scope": "current application",
+      "source_sha256": "8e48f4f0cacd66902d6729691942d361c3937caa9c43fc9a2dfa1942a996a0fd"
+    },
+    {
+      "path": "app/backend/orchestrator/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/orchestrator/events.py",
+      "source_scope": "current application",
+      "source_sha256": "2ab5e623804ee6a7aac4262e4ac31e836b1f3ebe1c8e671388a5b8a7cab323fa"
+    },
+    {
+      "path": "app/backend/orchestrator/pipeline.py",
+      "source_scope": "current application",
+      "source_sha256": "4fa062cb29ce600f1030bb23ef92afc7228c5278ca782d462074862ae47a024a"
+    },
+    {
+      "path": "app/backend/orchestrator/session_store.py",
+      "source_scope": "current application",
+      "source_sha256": "f955547040317f3ba009c405d33d725144277130eefe70a3777d96b7a868241f"
+    },
+    {
+      "path": "app/backend/requirements.txt",
+      "source_scope": "current application",
+      "source_sha256": "72bd9228d6d5d13539550da05ac28b1851c022ac966920aa5e129e8be998bc75"
+    },
+    {
+      "path": "app/backend/services/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/services/cluster_input_builder.py",
+      "source_scope": "current application",
+      "source_sha256": "35bcaf14cfbdc21a324c48422f65f4709e74a5d8c097ae3a145a8b65c39d4e37"
+    },
+    {
+      "path": "app/backend/services/cluster_merge.py",
+      "source_scope": "current application",
+      "source_sha256": "a0dad8342e1ee03739925dda102470f9122e542558030f21f55985b2b1caf04f"
+    },
+    {
+      "path": "app/backend/services/clustering_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "50c5b58dd95f0e65a222459800bbd5c74d6588c14216ba2d95b582e6430b833d"
+    },
+    {
+      "path": "app/backend/services/conversation_memory.py",
+      "source_scope": "current application",
+      "source_sha256": "817db567ca63c167a2f5e24982285a4daec399661c63d2619c893c874b250902"
+    },
+    {
+      "path": "app/backend/services/data_resolver.py",
+      "source_scope": "current application",
+      "source_sha256": "7b60a1cb16da45fb1498980574c9a1029367bbea0537e17ba783ac7eef609462"
+    },
+    {
+      "path": "app/backend/services/eoh_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "d8cd01041edae60bb8f8aba4fa0cdee4af26a1e6895c4cc5a826be6a1e84934c"
+    },
+    {
+      "path": "app/backend/services/eoh_seeds.py",
+      "source_scope": "current application",
+      "source_sha256": "9dac514cb11a6776a35a60c449cc221fcd27f3ac0cb789be047054bf89f679a4"
+    },
+    {
+      "path": "app/backend/services/llm_client.py",
+      "source_scope": "current application",
+      "source_sha256": "be7f37c468e4204278eeadd4af0dc997b118026aeecba97c1933236265d3f514"
+    },
+    {
+      "path": "app/backend/services/llm_router.py",
+      "source_scope": "current application",
+      "source_sha256": "d2301ebe9fc382cbfd4b2f844a3dd7423b3086efd4e1f991ac1554d09a02d075"
+    },
+    {
+      "path": "app/backend/services/mmd_designer.py",
+      "source_scope": "current application",
+      "source_sha256": "cce664f1fd99acb4d11e229e635be7c9ebf762fc01d158dee0a092b8d8cddff0"
+    },
+    {
+      "path": "app/backend/services/mmd_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "901f0a9be94cc281925d7a716810fdbf008f4dfd22f59b3d78026dd24cdfaff1"
+    },
+    {
+      "path": "app/backend/services/narrator.py",
+      "source_scope": "current application",
+      "source_sha256": "189860f254e4aebc11b9e910ae0696d2eb7f2bf5134f8b222b1e8de445a9ffa1"
+    },
+    {
+      "path": "app/backend/services/planner.py",
+      "source_scope": "current application",
+      "source_sha256": "b261a46be0cbceeb7ea4ae1e35a68ba0168f94bc83cf4f8b1107ecc43e3eef97"
+    },
+    {
+      "path": "app/backend/services/reflective_search_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "a6206d89584af79080434c650921fd366b71424280644b67ab738b076302045e"
+    },
+    {
+      "path": "app/backend/services/settings_store.py",
+      "source_scope": "current application",
+      "source_sha256": "fc6b099b681c9c22eaa3b7f592a74b72d1d11216cfd768f65d1625b4c2763de7"
+    },
+    {
+      "path": "app/backend/settings.py",
+      "source_scope": "current application",
+      "source_sha256": "0c834e178fb33460008442217190887a94446dd82d33faf77c8c805d61de1b7f"
+    },
+    {
+      "path": "app/backend/tests/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/backend/tests/smoke_designer_via_ws.py",
+      "source_scope": "current application",
+      "source_sha256": "b60d489a2719e9378ff67e6cd6dff4534fec89b2e8828f85684bb3c0180d4419"
+    },
+    {
+      "path": "app/backend/tests/smoke_router.py",
+      "source_scope": "current application",
+      "source_sha256": "88914afc58e398fe6fcefbf35c1f3232bcbce3c3901388b3787bce28826bd1b0"
+    },
+    {
+      "path": "app/backend/tests/test_action_body_contract.py",
+      "source_scope": "current application",
+      "source_sha256": "ea08c721b8efb9410f70635f1b81069c3a6aeb5fcfe4482e32c34a7ca8db9204"
+    },
+    {
+      "path": "app/backend/tests/test_battwise_naming.py",
+      "source_scope": "current application",
+      "source_sha256": "350b23411da65728e292082b7471da3bb8bcb834d93dc89b361c2e045d170919"
+    },
+    {
+      "path": "app/backend/tests/test_battwise_public_language.py",
+      "source_scope": "current application",
+      "source_sha256": "5dbe7c2fb6cb9e5fb772fab302f2d325733278431318f1c1c6d46f0febe9b24f"
+    },
+    {
+      "path": "app/backend/tests/test_cancel_clears_gates.py",
+      "source_scope": "current application",
+      "source_sha256": "89986986fc225acfb2d8ecafa67a33e6eb1d4119a8adf8af138726a9bbf65b5e"
+    },
+    {
+      "path": "app/backend/tests/test_cddi_compatibility.py",
+      "source_scope": "current application",
+      "source_sha256": "6da9289218612d7b9391473bd9fd22f2da039f2b2de16d706bd2daa551dbdc1d"
+    },
+    {
+      "path": "app/backend/tests/test_chat_agent_latency_config.py",
+      "source_scope": "current application",
+      "source_sha256": "1c9c92b4e1d78b2d7930c38764d6b7ed37af53d48ad4492c11e4f8ef4e1ea43b"
+    },
+    {
+      "path": "app/backend/tests/test_cluster_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "8ba15c92c138919139384caa32026d27298827fb5e7fa6ea7baa879086b99c3c"
+    },
+    {
+      "path": "app/backend/tests/test_cluster_dispersion.py",
+      "source_scope": "current application",
+      "source_sha256": "f6bdad1cf98a5319368ac2f62a7f007e0edf4ad83c7ba74630723372f7d91705"
+    },
+    {
+      "path": "app/backend/tests/test_cluster_input_builder.py",
+      "source_scope": "current application",
+      "source_sha256": "bfa0c7ceb284034c2cdef4792c11610c88a913da861a473058b02a1508d707a6"
+    },
+    {
+      "path": "app/backend/tests/test_cluster_merge.py",
+      "source_scope": "current application",
+      "source_sha256": "5e4cd0206c85d8f9e4ce30b57e48244d11bb30aa8a0284d554c965aabcf5ba1e"
+    },
+    {
+      "path": "app/backend/tests/test_clustering_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "605e9814670f3d041bad66f180406a5429edd1fb269edd64fb328ddf554c0bde"
+    },
+    {
+      "path": "app/backend/tests/test_compute_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "49313623160020e614ea75ddc6224ae8b44c574fc0faa40259af36ac90b26bd6"
+    },
+    {
+      "path": "app/backend/tests/test_compute_timeout.py",
+      "source_scope": "current application",
+      "source_sha256": "8500fc06b47121201d7a318a4cd7704a39115a808396bfe75433c99b01b21087"
+    },
+    {
+      "path": "app/backend/tests/test_conversation_memory.py",
+      "source_scope": "current application",
+      "source_sha256": "a66590dd19ca6326c91f8a86d5752a6dea7c8a30fda5af0afbb5b987d201a909"
+    },
+    {
+      "path": "app/backend/tests/test_curve_dispersion_md.py",
+      "source_scope": "current application",
+      "source_sha256": "48416962e2fcad4bf18da9b6db6f835f9f9915bf49b39325e5eb42347493ea07"
+    },
+    {
+      "path": "app/backend/tests/test_dataset_upload.py",
+      "source_scope": "current application",
+      "source_sha256": "fd8442232ecabb6c7c80a6cc3e080b29ab3e0e38daf6b4e222cc2bb6d1c18be9"
+    },
+    {
+      "path": "app/backend/tests/test_designer_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "7c8ffc1e83464fdce87cd9d02e7d2a5687e839b9c40796704e20e34208e0f3fc"
+    },
+    {
+      "path": "app/backend/tests/test_designer_eoh_case.py",
+      "source_scope": "current application",
+      "source_sha256": "e83f2f25902ba643cc8ad37c9cd7e73c71f5cb1c22f1ea426aa2370360fa775c"
+    },
+    {
+      "path": "app/backend/tests/test_eoh_designer_e2e.py",
+      "source_scope": "current application",
+      "source_sha256": "056be7b86d0e11d66d9b456ce620962ad5b6cd523a50c2464427ae7343d23324"
+    },
+    {
+      "path": "app/backend/tests/test_eoh_eval_cases.py",
+      "source_scope": "current application",
+      "source_sha256": "0f595df0beb9a5fb13927cdcfa55279ac1da3d5f848e72a1a13a83f303c36fa1"
+    },
+    {
+      "path": "app/backend/tests/test_eoh_parser.py",
+      "source_scope": "current application",
+      "source_sha256": "cfebe3d1e8841f0328beb6bc51ca0898add923f3deef76650f4951fca6d90ddc"
+    },
+    {
+      "path": "app/backend/tests/test_eoh_runtime_config.py",
+      "source_scope": "current application",
+      "source_sha256": "ba669cdcfd32782a79dbf200914c3fd42d1fdd085daeff1f50d9e97cb1301dec"
+    },
+    {
+      "path": "app/backend/tests/test_eoh_seeds.py",
+      "source_scope": "current application",
+      "source_sha256": "b83049802f4d6a046c5c979733cb22d307f3890e413c77fa0f32fc2523d7d2f1"
+    },
+    {
+      "path": "app/backend/tests/test_fingerprint_curve_only.py",
+      "source_scope": "current application",
+      "source_sha256": "87290350ae779b39aea4d23432aa16eaef3b54d5da6eceecb21f792b5e697d2f"
+    },
+    {
+      "path": "app/backend/tests/test_llm_pinned_model.py",
+      "source_scope": "current application",
+      "source_sha256": "90414fb84918771fa210bedcf95a1ec0c0b450d9692f4b5989137551b2a74101"
+    },
+    {
+      "path": "app/backend/tests/test_llm_router.py",
+      "source_scope": "current application",
+      "source_sha256": "41921be171464ec085481f85ca2033bbba0eff88cfb9df053caab2e12d4f2730"
+    },
+    {
+      "path": "app/backend/tests/test_mmd_designer.py",
+      "source_scope": "current application",
+      "source_sha256": "421c2310f26442203cef6df75fbf6ecb80404142b1f8aad95aedb5f8adc8845a"
+    },
+    {
+      "path": "app/backend/tests/test_mmd_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "01b04aefa3cf465ea9c5824b4237f8e8c9611e8e2ba0e4ba7967ca8cc660f29f"
+    },
+    {
+      "path": "app/backend/tests/test_narrator.py",
+      "source_scope": "current application",
+      "source_sha256": "88b4749e2401f6509af385e743cb9d025a70681be898914e3693299cd725a377"
+    },
+    {
+      "path": "app/backend/tests/test_pipeline_cancel_flags.py",
+      "source_scope": "current application",
+      "source_sha256": "c16b3ea49c7fc432a13d81fd4bc42f08f2ec8ea5b53a41767f5a6b17ab9d63ec"
+    },
+    {
+      "path": "app/backend/tests/test_pipeline_cluster_gate.py",
+      "source_scope": "current application",
+      "source_sha256": "03939f83977fbd3dc4034acc44fcc0fa2126ab33d8fae780def198612cc9f798"
+    },
+    {
+      "path": "app/backend/tests/test_pipeline_design_gate.py",
+      "source_scope": "current application",
+      "source_sha256": "651d838351aa9bd7d3236af3262c1948578718460ce4c59f7f35fa532c5c065c"
+    },
+    {
+      "path": "app/backend/tests/test_pipeline_end_to_end.py",
+      "source_scope": "current application",
+      "source_sha256": "967c8be7484491a9d9ce29861b6d39d62e9c077ed78c080dc17acfe91ea04f6e"
+    },
+    {
+      "path": "app/backend/tests/test_pipeline_plan.py",
+      "source_scope": "current application",
+      "source_sha256": "02836295cf14c1981f4889c88c84a3b16d4b6e3487f89f204f4d232d8a590021"
+    },
+    {
+      "path": "app/backend/tests/test_plan_step_edit.py",
+      "source_scope": "current application",
+      "source_sha256": "4a132409bd502d52517dd604a5bcb9490e06c564cd4f4c8f5737075066bb495e"
+    },
+    {
+      "path": "app/backend/tests/test_planner.py",
+      "source_scope": "current application",
+      "source_sha256": "a02ff2e84dee68cbd264341135b2859ef07be3e18d299e724ba9028477477c38"
+    },
+    {
+      "path": "app/backend/tests/test_refinement_agent.py",
+      "source_scope": "current application",
+      "source_sha256": "a504f02be482fb177976af395a87bc59b3369a4ed1921de9b2f1a0a24e747794"
+    },
+    {
+      "path": "app/backend/tests/test_refinement_merge_chat.py",
+      "source_scope": "current application",
+      "source_sha256": "f3989c2d433580236e6cc83f9cf1a242bb60b319858f509713d4d22663987526"
+    },
+    {
+      "path": "app/backend/tests/test_refinement_multi_cluster.py",
+      "source_scope": "current application",
+      "source_sha256": "77f57a330101905c7c460fdc7700e3cf7e4746b98410f769290ad10c2de0cc00"
+    },
+    {
+      "path": "app/backend/tests/test_refinement_runner.py",
+      "source_scope": "current application",
+      "source_sha256": "c33802be534778557dfdfb554739876c6e8a425ed6a7338df7ad45f9a857af7b"
+    },
+    {
+      "path": "app/backend/tests/test_reflective_search_source.py",
+      "source_scope": "current application",
+      "source_sha256": "5e4803b846b19f274e898e7d4bebe0b90140c530d69aac7878dd2e286b9ee68e"
+    },
+    {
+      "path": "app/backend/tests/test_router_cancel.py",
+      "source_scope": "current application",
+      "source_sha256": "a39cb04ccf42bd53e34149bebfc8ced30df9e221e364493b1fe5675a91e4313c"
+    },
+    {
+      "path": "app/backend/tests/test_router_cluster_params.py",
+      "source_scope": "current application",
+      "source_sha256": "36bbba85857695dc33bf73295375ae700e20dd3bbf006814d44e8a0ba56f644c"
+    },
+    {
+      "path": "app/backend/tests/test_router_eoh_params.py",
+      "source_scope": "current application",
+      "source_sha256": "beca31332d0beeadbc4e2bff11a178a4fd6e6c6a1e1c6ed0fb4cbba0281ab53d"
+    },
+    {
+      "path": "app/backend/tests/test_router_smart.py",
+      "source_scope": "current application",
+      "source_sha256": "9763fe01756124bd6c36f834618aed92ec456ac2bdcf8740c93779c38b61b0c8"
+    },
+    {
+      "path": "app/backend/tests/test_router_target_k.py",
+      "source_scope": "current application",
+      "source_sha256": "0791ef31fa322e16bcb080a6ff308149b49588ecff0a0e93bbf21db97dbd4171"
+    },
+    {
+      "path": "app/backend/tests/test_source_hygiene.py",
+      "source_scope": "current application",
+      "source_sha256": "e52620333e81a37572584a21cd48c8e6f6af05cc078f6e0bd32654905bf49233"
+    },
+    {
+      "path": "app/backend/tools/__init__.py",
+      "source_scope": "current application",
+      "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "app/backend/tools/compute_worker.py",
+      "source_scope": "current application",
+      "source_sha256": "70d4e082415b9b5fb026bd9d9bc474a50c0ce872cdef3bc3d51de96234e39878"
+    },
+    {
+      "path": "app/frontend/index.html",
+      "source_scope": "current application",
+      "source_sha256": "755545fc5e3cae6fe467bc7405db403295a458951bdac146da17d94ba8b4ab5c"
+    },
+    {
+      "path": "app/frontend/package-lock.json",
+      "source_scope": "current application",
+      "source_sha256": "a0953f421f67000d6ed34ca41ffaaac0b8698c76b521751914475f97ce33651e"
+    },
+    {
+      "path": "app/frontend/package.json",
+      "source_scope": "current application",
+      "source_sha256": "4353058349ba3b873fbde28a327bcb7af8ed43586f51ca5e6cd6b2ebf92e5758"
+    },
+    {
+      "path": "app/frontend/postcss.config.js",
+      "source_scope": "current application",
+      "source_sha256": "e32657baf631d7c5f4dc67b4b2ee0ec8e7d5b3c41860e09cddce7c0377cd80bc"
+    },
+    {
+      "path": "app/frontend/src/api/rest.ts",
+      "source_scope": "current application",
+      "source_sha256": "99fea86cfb8c1a0a219bd566468b1220b1ff061ab172f18670b6d7604c94974d"
+    },
+    {
+      "path": "app/frontend/src/api/ws.ts",
+      "source_scope": "current application",
+      "source_sha256": "d484fbaf8202361b987185b03b2d1caca1c23bbda5ed9444976d3706b773903f"
+    },
+    {
+      "path": "app/frontend/src/App.tsx",
+      "source_scope": "current application",
+      "source_sha256": "fd048cd8198b10cca249d19490c5df2e7f7bd763bdefeee38ca1b8dcccf1e56f"
+    },
+    {
+      "path": "app/frontend/src/components/AgentPipeline.tsx",
+      "source_scope": "current application",
+      "source_sha256": "e7b5314d49d913ac5370c087a771c49920aa7efbc19ef244c6298a75f2a1092f"
+    },
+    {
+      "path": "app/frontend/src/components/ArtifactsPanel.tsx",
+      "source_scope": "current application",
+      "source_sha256": "346c40dfa1a3265482040f162f4adc3f5145aef492644d83a0cbbcdab21d4a4d"
+    },
+    {
+      "path": "app/frontend/src/components/charts/CapacityBoxplot.tsx",
+      "source_scope": "current application",
+      "source_sha256": "c7947ee5779ad25d2a5fed9b581af8bf861f34ec5064a2c948b7661659ecaa63"
+    },
+    {
+      "path": "app/frontend/src/components/charts/ClusterFingerprint.tsx",
+      "source_scope": "current application",
+      "source_sha256": "1b29d079d2f11eaa323f57f69c6544166f2c87ec8194c85cf9b02e48cdd1a543"
+    },
+    {
+      "path": "app/frontend/src/components/charts/ClusterKControls.tsx",
+      "source_scope": "current application",
+      "source_sha256": "fcf2b784aa6df646f71524fa98d7f9f1d7e46c715616da077cbd5ec22fd9ea2c"
+    },
+    {
+      "path": "app/frontend/src/components/charts/ClusterScatter.tsx",
+      "source_scope": "current application",
+      "source_sha256": "2fd1b00080231b7a7830faf4195f4a551fbf0b13b0ac25efd341c6c725561be3"
+    },
+    {
+      "path": "app/frontend/src/components/charts/LLMLogStream.tsx",
+      "source_scope": "current application",
+      "source_sha256": "57026519945488584f92017bd1da8cf2b874d556bdb7d56972f35542d7a83b07"
+    },
+    {
+      "path": "app/frontend/src/components/charts/MMDCodeViewer.tsx",
+      "source_scope": "current application",
+      "source_sha256": "78fe626852f947d7793b54f4cc136ff8adfd9b485da0dfe04bc477ae3c996c27"
+    },
+    {
+      "path": "app/frontend/src/components/charts/MMDDistribution.tsx",
+      "source_scope": "current application",
+      "source_sha256": "3da2babf2a15559105494e15116c45e6a1641a64a14ea2ef2cf175aedfe3cc0b"
+    },
+    {
+      "path": "app/frontend/src/components/charts/RecyclingDecisionCards.tsx",
+      "source_scope": "current application",
+      "source_sha256": "97239c805d7b7157a15d7bf83ae4615cf5f5a1525498dcfb4549a1bbfafc4fda"
+    },
+    {
+      "path": "app/frontend/src/components/charts/ReflectiveSearchLogStream.tsx",
+      "source_scope": "current application",
+      "source_sha256": "266256ce501d31c8be850fbeeaae41e9b7569a8f041d9ef5e8df95d633948c63"
+    },
+    {
+      "path": "app/frontend/src/components/charts/ReflectiveSearchProgressChart.tsx",
+      "source_scope": "current application",
+      "source_sha256": "bafffce664825220059141d286a2012eb04238df5e3721d95da2764ec03778ad"
+    },
+    {
+      "path": "app/frontend/src/components/ChatPanel.tsx",
+      "source_scope": "current application",
+      "source_sha256": "4051aae428216b2e156874e4bfe7e8a6a45b3d7c0b61408c482219d92894375d"
+    },
+    {
+      "path": "app/frontend/src/components/ConversationSummary.tsx",
+      "source_scope": "current application",
+      "source_sha256": "e3b8f1c806cd63b34524f9d51e25f96a471b60e7a3b341a8b1240a0d56c5fb8a"
+    },
+    {
+      "path": "app/frontend/src/components/DatasetManagerDrawer.tsx",
+      "source_scope": "current application",
+      "source_sha256": "a8a374dd8ede76deef59e92d177f77bd658578a95f435868714ab7f54f78d774"
+    },
+    {
+      "path": "app/frontend/src/components/ExecutionTimeline.tsx",
+      "source_scope": "current application",
+      "source_sha256": "51597c7dc78cd9a8709c37e5dc1cf47f1e2fd9c36424418556940a7aef056dc0"
+    },
+    {
+      "path": "app/frontend/src/components/LLMSettingsDrawer.tsx",
+      "source_scope": "current application",
+      "source_sha256": "b96b49dc1643f22deb9112cbaf0e6d4783e74081f5896c95bece06901357ed2b"
+    },
+    {
+      "path": "app/frontend/src/components/MainStage.tsx",
+      "source_scope": "current application",
+      "source_sha256": "82bcd090cf58ff559ca35b14c5eb10323e026a659b1f12c343e3f514b3c21542"
+    },
+    {
+      "path": "app/frontend/src/components/MessageContent.tsx",
+      "source_scope": "current application",
+      "source_sha256": "a75f92f563cc0e4379260229af0468295a74cb98671c4ec97d754d8cc5a5df5e"
+    },
+    {
+      "path": "app/frontend/src/components/PlanPanel.tsx",
+      "source_scope": "current application",
+      "source_sha256": "edfe821a34ce72a80219c471d7f065add9d1e0da64ae9d31fd8ac6b47e2ae023"
+    },
+    {
+      "path": "app/frontend/src/components/PlanStepEditor.tsx",
+      "source_scope": "current application",
+      "source_sha256": "fdab6e0112cb1bcbd3d01555512ff262014977dd24a36638a86268382b8fb1ed"
+    },
+    {
+      "path": "app/frontend/src/components/planStepSchema.ts",
+      "source_scope": "current application",
+      "source_sha256": "b784e796e11fae4862cae472083ab3f7254f36ca46344419d52fd9f9bb1aeba7"
+    },
+    {
+      "path": "app/frontend/src/components/RefinementPanel.tsx",
+      "source_scope": "current application",
+      "source_sha256": "1245b6d6da0cb3a3f5e93a3dbac627dad70991ca88f788e77a56d7a0c91a76e9"
+    },
+    {
+      "path": "app/frontend/src/components/ToolCalls.tsx",
+      "source_scope": "current application",
+      "source_sha256": "443bc310717b0817e70a00a4307489adc886a5cb90b82000ab5dafd4b932d377"
+    },
+    {
+      "path": "app/frontend/src/components/TopBar.tsx",
+      "source_scope": "current application",
+      "source_sha256": "69514639e4b12a90dfbb2a06b638659c883a84d4b2c52752ddb64de2b4acb693"
+    },
+    {
+      "path": "app/frontend/src/main.tsx",
+      "source_scope": "current application",
+      "source_sha256": "d3c87bc30a7003b2863f08f01dfe2cd94534b8556038d7bdafa5578a3eb503e2"
+    },
+    {
+      "path": "app/frontend/src/pages/Landing.tsx",
+      "source_scope": "current application",
+      "source_sha256": "fdd15eaa8edca827afb101a51e935104d7f26e987fd8759aa3597b1b202bc43d"
+    },
+    {
+      "path": "app/frontend/src/pages/Workbench.tsx",
+      "source_scope": "current application",
+      "source_sha256": "c11c962f39ec01fba91e15cb7a2616f1dee64f7bd7f605da62ba75db60718ed4"
+    },
+    {
+      "path": "app/frontend/src/store/sessionStore.ts",
+      "source_scope": "current application",
+      "source_sha256": "80db7f07a3a04c5cf8d92c22666f5cefee366e0ba195d69b12babb6b5ab2ec0e"
+    },
+    {
+      "path": "app/frontend/src/styles.css",
+      "source_scope": "current application",
+      "source_sha256": "d5634f2e071313d5d84c489dd37bb9842058afbcb0f87e0f6d569685ffa37f87"
+    },
+    {
+      "path": "app/frontend/src/types.ts",
+      "source_scope": "current application",
+      "source_sha256": "dcf4a18b23018bf5eb9bbe4f61e1f662d26a80ba4ee67be39934753966f62040"
+    },
+    {
+      "path": "app/frontend/src/utils/format.ts",
+      "source_scope": "current application",
+      "source_sha256": "33e598f2029d4d4182b291368c761c02cbc00bf8a110b59c847c215d274f6c53"
+    },
+    {
+      "path": "app/frontend/tailwind.config.ts",
+      "source_scope": "current application",
+      "source_sha256": "1998a12423f4cc1319a6076be7795831d8528b68b5b6ff60e92bc8f1efc69274"
+    },
+    {
+      "path": "app/frontend/tsconfig.json",
+      "source_scope": "current application",
+      "source_sha256": "33f9403c4fafbb02ba1c6eda4c02aa6ca607e94a19ff4cf3da63e343dfd6741c"
+    },
+    {
+      "path": "app/frontend/vite.config.ts",
+      "source_scope": "current application",
+      "source_sha256": "4bda9c249c7a4b8c8f5f707b91915f8de8c26529eea86a3f157769ba4372db31"
+    },
+    {
+      "path": "deploy/run_dev.sh",
+      "source_scope": "current launch scripts",
+      "source_sha256": "56b77a4f09b204d6d102b551f9a1a5f4a5785987d6cf792332354d39f1dd3309"
+    },
+    {
+      "path": "deploy/run_prod.sh",
+      "source_scope": "current launch scripts",
+      "source_sha256": "4aeee415340b4bc9c5496db191dcc9135e1589521c78098753035e9994869024"
+    },
+    {
+      "path": "deploy/kill_backend.sh",
+      "source_scope": "current launch scripts",
+      "source_sha256": "f4bebe5791c09460414b902a752f106cacc3fd4645c0a25fae3bc627e0285e1e"
+    },
+    {
+      "path": "experiments/__init__.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "7b1be628010875c6c03f700ab745d50ca373ced31fd6876995ac8705fb4f589d"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/__init__.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "c38211a323c7784eb82b65cd5a849418410c42a97a2b5d7b07e3d258b777fb2b"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/clustering.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "7c617ce8c28782430bb8ba8b1a157b51c4402944a669f64afb8c3b3a063a0bff"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/config.smoke.yaml",
+      "source_scope": "current experiment source",
+      "source_sha256": "da450ddde8f0397325e0f65f0f7d62233181a3f03070f42d2f1a60514ca853e4"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/config.yaml",
+      "source_scope": "current experiment source",
+      "source_sha256": "bce64bfc646647fc5137e4ed682f0585460a49fe5ede89df7d8b5aabff2323e3"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/contracts.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "9efa8baa0f9fe6d12ff56811307c132e9bb6d6b653a1f240e990a8816b3fada0"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/data.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "d4d04cd1f5c3687776dae380384bce0d11e3f85a1e1467a9488251375626c51b"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/__init__.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "594bbbf704a7d844ba3082de36e3d1012fe4583a1ba55d7b32b09c1a6c1f653e"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/battwise_cddi.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "96455c95e32a2a848f21ce704df72f45f12c9d0ee5ac3a651d987c9289c56bc4"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/decm_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "c62e685adb84e0620ba2c49362880275024b03f452a5dbfc839adca69c1894fd"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/fc_vae_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "bb540080ae05ea7257cb677f318c2885959359107e550d7f1d2a273f6e8224f0"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/kpca_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "6dde661b8bbd6f810f681e2c499fe9533f13add5093399671526026e7a499f57"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/methods/ocv_ir_control.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "1b55c7ca2100281fc4e1bf5f3cb43cdb981dcc4bc5a92b66415a489df12740b2"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/metrics.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "ba37bc76f53b5231f437aafa1205a6a5e3e5bad9cd9c6f88610a1a5f94598a47"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/preprocessing.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "1bba16321e6fe410ddb40ecdc95849bf6d0523269816281437ef6560e01c0ce9"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/registry.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "e7a6f9ca1799290306f95e6d028bbb299ead17a660ce480df5445a8f21fed5e4"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/report.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "efa2ea1ce2e821141f6f357ea9c44a80bb0824b68b31a3ff97038d74bf7f8e46"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/requirements-benchmark.txt",
+      "source_scope": "current experiment source",
+      "source_sha256": "63cef0e07a7d37ad095a590e113b099bcb1045e0b3c4df6889f61f4bd6aef50f"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/run.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "9e625e18b6c937be858d06ed70a2e87e082bab2bc757c9ba08d776bc7294c438"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_battwise_cddi.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "448e9e50b120429ee5f1bdcd908e769cda10db33cdf4c5c1eacb2f5e192e4185"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_clustering.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "ffc2e81c68e38a9fe61e6b7ca31065179e0fc514a133b09fc4a2af6779a52214"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_data.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "921b8129482559a0147a49070849909aa4004895410602df6a3fa82cfd12fc42"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_decm_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "3043144665c8b45cce9489842414ed76d12beb654fa346be714c55d8d796b6ff"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_fc_vae_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "2b097cfe803c1c1d1f01f3918ec6219a0710a2803df3e4cbec524c7fbf6928af"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_kpca_1d.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "fff47f06ab918504e2de3a5a031e682681ebc75bb944b1695ed25422882e4a2e"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_metrics.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "cae337bf4db915bc5b5704034282e09bf9617193032c766fbf165129e340864c"
+    },
+    {
+      "path": "experiments/fair_1d_benchmark/tests/test_runner.py",
+      "source_scope": "current experiment source",
+      "source_sha256": "6cad8e0df28dd1bf4b765d2d86df444e88169539b2d2306d6439273840d90a1c"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/__init__.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/__init__.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "3dcb98a4e2fbd9af0ab18433c8de719a2477c3a1ebf097a99c87fff0da2f4bea"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/eoh_adapter.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "74755476cadc40779cac07003d5d9ae5b4b55127387007b0bd618036eec86c1f"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "cdaaf6f09d27722e70946445f4e5e97707b6ef818284a352b0e27e8f6f9bb09a"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh_evolution.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "109b3e618e0926207faf2cad8abb1ce6c0c7e305e029c8ee6613199447cd486a"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh_interface_EC.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "af71ece08af01bb477945477ec3d955e2ae640ec40f23a9dc6734e385ead89a1"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/getParas.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "7a5d2ce1024fa8a935f4d920d4cf5472f06c649bd2f694ed5c7281d74b080b09"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/interface_LLM.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "623906f707ced48e7c7c5a8c2bbba053c88296151d698f0b458b2c4e9ead9de9"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/pop_greedy.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "76c2a63bc7889470c5ec23b8d1c494e7783681e0c99d453d0ce1fcafaab8a704"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prob_rank.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "7cae9f3b7cbf53b81aabd986267ea47ab53a9fbf4377f5d6e4e9d71397e2d32c"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prompts/bpp_online.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "cfdc833c9c38b1d26e6cb640ae984951bf97a9b03f05a412a9b641cadf71ba62"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prompts/tsp_greedy.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "a4daad6a12e6334b90a5532e2cde3e94747e1b949ee2e36321d195d1ebf44f77"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/problem_adapter.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "fa2718da14d76466ec4509771a9741a27692031ba6b3cbcd3e899fc12a450123"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/readme.md",
+      "source_scope": "integrated search source",
+      "source_sha256": "da87b2232c11f8d058693933ddf0863ddf7de62ac7ecba1ca0bf90a57df6e8b9"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "37a958efa47ee71d8fc4932bfcaf7f3e8614db950b537acad02d9148794556d5"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_100s.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "1516907e3a0d7000fb1a2d9c35d9f1272bdaaa64e8c6904cab4a11f01b7fbd27"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_200s.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "fd4ed202913830f2ba249e52b78941ded1c2a98984c749bfdbfbf3b983435f33"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_500s.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "d7ae500068e59409e5e223594d05961fe3d23818461ff99225fc6971d74fb6e6"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_aii200.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "3651a2466e91308332cfc2db199fbc82be8c214d3dfa7d3848ef415b6072a03a"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_cc200.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "3176ce2350778adce3cabed7769b1b21ba1bb017dfaa765edbd65ff403f38811"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_cv100.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "ef5da1abeadcca68a88f0d30f956c6b836499cfa63d0575e137877c663dbbd13"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/hydra/output/local.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "b5072b10aeed8777c6db1a15b2060d284ddb0c4fc17b61abd95178d524f3983f"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "5d0584e3ff823bad1b73581b7035b8bf594456383d7300b570901f66e7fb5902"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd_back.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "7a49872fefa3ef033c753bb21b189e9070273382eb6cf66ec92887cac68ef8cc"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd_cv.yaml",
+      "source_scope": "integrated search source",
+      "source_sha256": "fe8b48f950c16315535e5c204a8865c82b0a52c126407196aa58e3025244fb2c"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/eoh_textgrad.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "587b16102e9699cc74c85faf2944f48bc5d10a2b6af6f5e326221d1de34d25f8"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/main.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "cff3589606b0340b635eaeaef2706eb8a54cc6300c7631e74433176775de70b8"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/__init__.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "9d3e9ee96e3cf14955d74cc0b45dae364ed0213aec0ceba19896b84011d895f2"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/battery_mmd.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "ce7535d7a74297658cbf62e1b74752ccc5f616c80aaf19906a38631a8ff66786"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/eval.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "b28e024ca65fa93cc9c77a44ded573ffbd963d775b9d0d3aef2ff711a9b00fc2"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/gpt.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "97c9fafa686e969f1ee57e4a49f9aefdfbd5982e5f4ebadd0190fa2d4b455684"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/external_knowledge.txt",
+      "source_scope": "integrated search source",
+      "source_sha256": "14a2013b2826f799908a342a2d8e0b65cb5a812d88bdabcce35395e774e33363"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/func_desc.txt",
+      "source_scope": "integrated search source",
+      "source_sha256": "3709e03976b7920805266a9a01f7211aace8d3552232b37c7d9a34624fabe8c2"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/func_signature.txt",
+      "source_scope": "integrated search source",
+      "source_sha256": "7c75a9a4822af038ee3e0609a135f4b1083fb6eb3528ec6ca9f53e3ec5630b32"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/seed_func.txt",
+      "source_scope": "integrated search source",
+      "source_sha256": "71583e9f4ed1381ccb2ea7f4b5374ffe360e4b8ee17b4d1cf4a39f71d369579c"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/reflective_metric_search.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "62cb4c6cccece4eff1feefaf075304b1388b6203adc6f12d2a85d8859075a072"
+    },
+    {
+      "path": "Evo_Textgrad_battery_eoh_deepseek/utils/utils.py",
+      "source_scope": "integrated search source",
+      "source_sha256": "4ea401548089c771f888625b630a81b9c48031cd73e3dfe9b7d2afa583fae429"
+    },
+    {
+      "path": "dianchi03/mmd_tools.py",
+      "source_scope": "compute reference implementation",
+      "source_sha256": "ff72330e789df3687b9f78c0fc1ba7afe7695ba2b533a0b96c4a4e4e8ad589ae"
+    },
+    {
+      "path": "dianchi03/mmd_tools_new.baseline.py",
+      "source_scope": "compute reference implementation",
+      "source_sha256": "a935f247ae968cc2696dfc162f72e2bc6d8538682538c210ecb95f0076bec99c"
+    },
+    {
+      "path": "dianchi03/mmd_tools_new.py",
+      "source_scope": "clean runtime baseline; no session candidate",
+      "source_sha256": "a935f247ae968cc2696dfc162f72e2bc6d8538682538c210ecb95f0076bec99c"
+    },
+    {
+      "path": "programs/cddi/calculate_mmd_v2.py",
+      "source_scope": "frozen selected program; not an experimental result table",
+      "source_sha256": "ee4c91f554c99d7eba989899c3e61f79f98e040b448ab74b93da78da56bd1975"
+    },
+    {
+      "path": "experiments/statistics/analyze_fair_benchmark.py",
+      "source_scope": "saved statistical-analysis source",
+      "source_sha256": "153180c42ba1aa08dabc6b0205f9d1f27ba1c735c72b04e6fa26a2651e7bf316"
+    },
+    {
+      "path": "comparisons/funsearch/candidate_programs.txt",
+      "source_scope": "preserved candidate programs; full search runner unavailable",
+      "source_sha256": "0d885be644d8c2a3d27ce3ebe0304f8f723825735f1bd1c3dc712c086b3c70d3"
+    }
+  ],
+  "packaging_changes": [
+    "New README and review documentation",
+    "Runtime gpt.py reset to supplied seed; mmd_tools_new.py reset to baseline",
+    "Benchmark scorer path points to programs/cddi/program.json",
+    "Statistics paths accept CLI arguments",
+    "Search subprocesses use the active interpreter",
+    "Reset runtime search gpt.py to the supplied seed, without shipping historical populations",
+    "Omitted saved candidate objective from benchmark metadata",
+    "Adapted source-hygiene documentation fixture to the review release scope",
+    "Root dependency files describe the observed validation environment; upstream backend pins retained as historical evidence",
+    "Preserved the upstream MIT license from its identified revision"
+  ],
+  "historical_identity": "No main-project Git commit was available; a new release repository must not be represented as the historical experiment commit."
+}

@@ -1,0 +1,68 @@
+project_root: ../..
+
+dataset:
+  data_dir: dianchi03/AII_200_new
+  expected_cells: 71
+  expected_points: 200
+
+clustering:
+  k: 6
+  pop_size: 20
+  max_iter: 5
+  seeds:
+    - 0
+
+output_dir: outputs/benchmark_smoke
+
+methods:
+  battwise_cddi:
+    class_path: experiments.fair_1d_benchmark.methods.battwise_cddi:BATTWISECDDReducer
+    kwargs:
+      source_json: programs/cddi/program.json
+      output_scale: 100000.0
+      fix_sigma: 0.0
+      kernel_mul: 2.0
+      kernel_num: 5
+  kpca_1d:
+    class_path: experiments.fair_1d_benchmark.methods.kpca_1d:KPCA1DReducer
+    kwargs: {}
+  fc_vae_1d:
+    class_path: experiments.fair_1d_benchmark.methods.fc_vae_1d:FCVAE1DReducer
+    kwargs:
+      hidden_dims:
+        - 64
+        - 16
+      beta_kl: 0.001
+      encoder_aux_weight: 1.0
+      decoder_aux_weight: 1.0
+      lr: 0.0001
+      max_epochs: 1000
+      patience: 50
+      min_delta: 0.000001
+      device: cpu
+  decm_1d:
+    class_path: experiments.fair_1d_benchmark.methods.decm_1d:DECM1DReducer
+    kwargs:
+      # Same paper loss and optimization definition as config.yaml.
+      # Smoke mode only shortens the two training stages.
+      hidden_dims:
+        - 64
+        - 16
+      pretrain_epochs: 5
+      joint_epochs: 5
+      lr: 0.001
+      patience: 50
+      min_delta: 0.000001
+      beta1: 1.0
+      beta2: 0.01
+      phi: 0.5
+      internal_clusters: 6
+      scatter_regularization: 0.000001
+      device: cpu
+  ocv_ir:
+    class_path: experiments.fair_1d_benchmark.methods.ocv_ir_control:OCVIRControl
+    kwargs: {}
+
+metadata:
+  purpose: Fast contract and integration validation only
+  formal_results: false
