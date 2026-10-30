@@ -1,5 +1,5 @@
-# BATTWISE Reflective Metric Search - first_500s dataset
-# Battery MMD Function Optimization Configuration - first_500s Dataset
+# BATTWISE Reflective Metric Search - AII_200 dataset
+# Battery MMD Function Optimization Configuration - AII_200 Dataset
 
 # Hydra配置（禁用自动输出目录）
 defaults:
@@ -19,7 +19,7 @@ temperature: 1.0
 llm_max_workers: 20
 llm_max_retries: 10
 llm_timeout: 60
-max_fe: 20
+max_fe: 50
 pop_size: 20
 batch_size: 20
 timeout: 200
@@ -49,22 +49,22 @@ operator_weights:
 
 # 问题配置
 problem:
-  problem_name: battery_mmd
+  problem_name: battery_cddi
   description: "Battery MMD Function Optimization for Recycling Applications"
   problem_size: null
   func_name: calculate_mmd
   obj_type: max
   problem_type: function_optimization
-  data_folder: problems/dianchi02/first_500s
-  model_filename: Model_first_500s.xls
+  data_folder: problems/battery_data/AII_200_new
+  model_filename: Model_200.xls
   char_filename: Charging_curve_characteristics.xlsx
   row_start: 0
   row_end: null
-  p_value_threshold: 0.1
+  p_value_threshold: 0.01
   verbose_eval: false
 
-# 案例选择：first_500s
-case_num: [3]
+# 案例选择：AII_200
+case_num: [4]
 
 # 日志配置
 log_level: INFO
@@ -72,4 +72,4 @@ log_level: INFO
 # 输出配置
 save_intermediate_results: true
 save_reflections: true
-output_dir: "./outputs/battery_mmd_500s"
+output_dir: "./outputs/battery_cddi_aii200"

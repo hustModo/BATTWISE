@@ -1,6 +1,6 @@
 """End-to-end test for DesignerAgent in full_eoh mode.
 
-Doesn't actually run Evo_Textgrad/main.py (that would take minutes and need
+Doesn't actually run battwise_cddi_search/main.py (that would take minutes and need
 LLM credentials). Instead we monkey-patch ``eoh_runner.start_eoh`` to spawn a
 *fake* worker that mimics the directory + main.log layout the real EOH child
 would produce.
@@ -44,7 +44,7 @@ def calculate_mmd_v2(xs: np.ndarray, xt: np.ndarray, fix_sigma=0, kernel_mul=2.0
 
 
 async def _fake_worker(out_dir: Path, total_generations: int, line_delay: float = 0.03) -> int:
-    """Mimic Evo_Textgrad/main.py producing main.log and best_population_*.json."""
+    """Mimic battwise_cddi_search/main.py producing main.log and best_population_*.json."""
     out_dir.mkdir(parents=True, exist_ok=True)
     log_path = out_dir / "main.log"
 

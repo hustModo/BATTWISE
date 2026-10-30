@@ -6,7 +6,7 @@ already been published.
 
 ## All-200 experiment loader
 
-Expected directory: `dianchi03/AII_200_new/` relative to the repository root.
+Expected directory: `battery_compute/AII_200_new/` relative to the repository root.
 The loader accepts `.xls` or `.xlsx` for each required workbook stem.
 
 | File | Required content |
@@ -29,7 +29,7 @@ raw reference curve. This distinction is explicit in `REPRODUCIBILITY.md`.
 
 ## First-200s application inputs
 
-Expected built-in directory: `dianchi03/first_200s/`, with cell curve files,
+Expected built-in directory: `battery_compute/first_200s/`, with cell curve files,
 `Model_first_200s.xls`, and `Charging_curve_characteristics.xlsx`.
 OCV/IR statistics are resolved using the application settings/data resolver.
 Inspect those modules when preparing a separately released measured-data bundle.
@@ -37,11 +37,11 @@ Inspect those modules when preparing a separately released measured-data bundle.
 ## Standalone search data path
 
 The integrated historical evaluator also recognizes
-`Evo_Textgrad_battery_eoh_deepseek/problems/dianchi02/<case>/`.
+`battwise_cddi_search/problems/battery_data/<case>/`.
 On Linux, a local link can avoid duplicating the input directory:
 
 ```bash
-ln -s ../../dianchi03 Evo_Textgrad_battery_eoh_deepseek/problems/dianchi02
+ln -s ../../battery_compute battwise_cddi_search/problems/battery_data
 ```
 
 Create it only if the target path does not already exist. The link and measured

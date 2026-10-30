@@ -79,7 +79,7 @@ async def collect_until(session_id: str, kind: str, agent: str, timeout: float =
 
 
 async def run_one_shot() -> int:
-    # Inject the hanging MMD into dianchi03/mmd_tools_new.py before running.
+    # Inject the hanging MMD into battery_compute/mmd_tools_new.py before running.
     # We use the real inject_mmd_code so the test exercises the same path
     # Designer does in production.
     mmd_runner.inject_mmd_code(HANG_MMD_CODE)

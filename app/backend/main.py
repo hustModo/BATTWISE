@@ -27,7 +27,7 @@ logger = logging.getLogger("battwise")
 async def lifespan(app: FastAPI):
     logger.info("Starting %s (debug=%s)", settings.app_name, settings.debug)
     logger.info("Workspace: %s", settings.workspace_dir)
-    # Restore dianchi03/mmd_tools_new.py from baseline if it's been polluted
+    # Restore battery_compute/mmd_tools_new.py from baseline if it's been polluted
     # by an aborted timeout test or a previous bad LLM injection. Without
     # this, the user would see Compute hang forever every time the backend
     # starts (because the worker subprocess loads whatever stub is on disk).

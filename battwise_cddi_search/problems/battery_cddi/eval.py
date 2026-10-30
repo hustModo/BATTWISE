@@ -33,7 +33,7 @@ CELL_FILTER = parse_cell_filter(cell_filter_arg)
 
 # Add paths
 sys.path.insert(0, root_dir)
-sys.path.insert(0, os.path.join(root_dir, 'problems', 'battery_mmd'))
+sys.path.insert(0, os.path.join(root_dir, 'problems', 'battery_cddi'))
 
 # Case configuration mapping
 # 索引映射: 0=CV_100, 1=first_100s, 2=first_200s, 3=first_500s, 4=AII_200, 5=CC_200
@@ -113,7 +113,7 @@ try:
     # Get case configuration
     if selected_case in CASE_CONFIGS:
         case_config = CASE_CONFIGS[selected_case]
-        DATA_FOLDER = os.path.join(root_dir, 'problems', 'dianchi02', case_config['folder'])
+        DATA_FOLDER = os.path.join(root_dir, 'problems', 'battery_data', case_config['folder'])
         MODEL_FILENAME = case_config['model_file']
         CHAR_FILENAME = case_config['char_file']
         ROW_START = case_config['row_start']
@@ -123,7 +123,7 @@ try:
     else:
         print(f"[!] Warning: Unknown case '{selected_case}', defaulting to CV_100")
         case_config = CASE_CONFIGS['CV_100']
-        DATA_FOLDER = os.path.join(root_dir, 'problems', 'dianchi02', case_config['folder'])
+        DATA_FOLDER = os.path.join(root_dir, 'problems', 'battery_data', case_config['folder'])
         MODEL_FILENAME = case_config['model_file']
         CHAR_FILENAME = case_config['char_file']
         ROW_START = case_config['row_start']
@@ -134,7 +134,7 @@ except Exception as e:
     # Fallback to CV_100 on any error
     print(f"[!] Error parsing case configuration: {e}, defaulting to CV_100")
     case_config = CASE_CONFIGS['CV_100']
-    DATA_FOLDER = os.path.join(root_dir, 'problems', 'dianchi02', case_config['folder'])
+    DATA_FOLDER = os.path.join(root_dir, 'problems', 'battery_data', case_config['folder'])
     MODEL_FILENAME = case_config['model_file']
     CHAR_FILENAME = case_config['char_file']
     ROW_START = case_config['row_start']

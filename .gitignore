@@ -18,9 +18,9 @@ results/
 **/*.log
 **/generated_code/
 **/gpt_code/
-Evo_Textgrad_battery_eoh_deepseek/outputs/
-Evo_Textgrad_battery_eoh_deepseek/problems/dianchi02
-Evo_Textgrad_battery_eoh_deepseek/seeds_from_history*.json
+battwise_cddi_search/outputs/
+battwise_cddi_search/problems/battery_data
+battwise_cddi_search/seeds_from_history*.json
 *.xls
 *.xlsx
 *.csv

@@ -9,10 +9,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 SEARCH_FILE = (
     ROOT
-    / "Evo_Textgrad_battery_eoh_deepseek"
+    / "battwise_cddi_search"
     / "reflective_metric_search.py"
 )
-MAIN_FILE = ROOT / "Evo_Textgrad_battery_eoh_deepseek" / "main.py"
+MAIN_FILE = ROOT / "battwise_cddi_search" / "main.py"
 
 
 def _class_names(source: str) -> set[str]:

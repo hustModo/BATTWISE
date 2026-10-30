@@ -118,7 +118,7 @@ def _read_best_json(path: Path) -> Optional[_Candidate]:
 
 
 def _read_best_code_txt(path: Path) -> Optional[_Candidate]:
-    """Read a best_code_battery_mmd.txt (final winner of a run)."""
+    """Read a best_code_battery_cddi.txt (final winner of a run)."""
     try:
         raw = path.read_text(encoding="utf-8", errors="replace")
     except Exception:  # noqa: BLE001
@@ -128,7 +128,7 @@ def _read_best_code_txt(path: Path) -> Optional[_Candidate]:
     if not code or "def " not in code:
         return None
     return _Candidate(
-        algorithm="Historical final winner (best_code_battery_mmd.txt)",
+        algorithm=f"Historical final winner ({path.name})",
         code=code,
         objective=-1.0,  # unknown — treat as good (best_code is the winner)
         source=path.name,
@@ -182,7 +182,9 @@ def _gather_candidates(history_dirs: Iterable[str]) -> List[_Candidate]:
             continue
 
         # final winner first (best signal)
-        final_txt = d / "best_code_battery_mmd.txt"
+        final_txt = d / "best_code_battery_cddi.txt"
+        if not final_txt.exists():
+            final_txt = d / "best_code_battery_mmd.txt"  # Historical saved runs.
         if final_txt.exists():
             c = _read_best_code_txt(final_txt)
             if c:

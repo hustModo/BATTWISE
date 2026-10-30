@@ -50,7 +50,7 @@ operator_weights:
 
 # 问题配置
 problem:
-  problem_name: battery_mmd
+  problem_name: battery_cddi
   description: "Battery MMD Function Optimization for Recycling Applications"
   problem_size: null  # Not applicable
   func_name: calculate_mmd
@@ -59,7 +59,7 @@ problem:
   
   # 电池数据配置（这些配置已不再使用，由eval.py的CASE_CONFIGS控制）
   # 保留用于向后兼容
-  data_folder: problems/dianchi02/CV  # 已弃用
+  data_folder: problems/battery_data/CV  # 已弃用
   model_filename: Model_CV_process.xlsx  # 已弃用
   char_filename: Electrochemical_indicators.xlsx  # 已弃用
   row_start: 0
@@ -85,4 +85,4 @@ log_level: INFO
 # 输出配置
 save_intermediate_results: true  # 保存中间结果
 save_reflections: true  # 保存反思记录
-output_dir: "./outputs/battery_mmd_cv"  # 输出目录（默认CV案例）
+output_dir: "./outputs/battery_cddi_cv"  # 输出目录（默认CV案例）

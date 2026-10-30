@@ -1,12 +1,12 @@
-"""Function-ised version of dianchi03/main.py.
+"""Function-ised version of battery_compute/main.py.
 
 Two entry points:
-    - inject_mmd_code(code) -> rewrites dianchi03/mmd_tools_new.py so that
+    - inject_mmd_code(code) -> rewrites battery_compute/mmd_tools_new.py so that
       MMD_cal_new is the LLM-designed function (with backup .bak).
     - compute_mmd_for_folder(...) -> a generator yielding incremental progress
       events plus a final summary, ready to be wrapped by an agent.
 
-Original `dianchi03/main.py` and `mmd_tools_new.py` are not modified at import
+Original `battery_compute/main.py` and `mmd_tools_new.py` are not modified at import
 time; we only rewrite mmd_tools_new.py when the user requests an injection,
 and we always back the file up first.
 """
@@ -50,7 +50,7 @@ def _rename_function(code: str, new_name: str) -> str:
 
 
 def inject_mmd_code(code: str, *, target_path: Path = DIANCHI_MMD_TOOLS_NEW) -> Path:
-    """Rewrite ``dianchi03/mmd_tools_new.py`` with the new MMD_cal_new function.
+    """Rewrite ``battery_compute/mmd_tools_new.py`` with the new MMD_cal_new function.
 
     A `.bak` backup of the existing file is always created before overwrite.
     Returns the path that was written.
@@ -303,7 +303,7 @@ def correlation_analysis(
     Note on ``p_threshold``:
         We default to 1.0 (NOT 0.1) to stay consistent with the upstream
         bundled search pipeline which BATTWISE wraps as Reflective Search
-        mode (see ``problems/battery_mmd/eval.py``: every CASE_CONFIG sets
+        mode (see ``problems/battery_cddi/eval.py``: every CASE_CONFIG sets
         ``p_threshold: 1``). With p<1.0 the "significant" filter is essentially
         a no-op and ``mean_sig`` reduces to ``mean |r|`` — that is the metric
         EOH minimises (objective = -mean_sig), so this is what the user sees

@@ -14,14 +14,14 @@ from app.backend.naming import SYSTEM_NAME
 REPO_ROOT = Path(__file__).resolve().parents[2]
 BACKEND_ROOT = Path(__file__).resolve().parent
 
-EVO_DIR = REPO_ROOT / "Evo_Textgrad_battery_eoh_deepseek"
-DIANCHI_DIR = REPO_ROOT / "dianchi03"
+EVO_DIR = REPO_ROOT / "battwise_cddi_search"
+DIANCHI_DIR = REPO_ROOT / "battery_compute"
 FIRST200_DIR = REPO_ROOT / "First_200_select"
 AII200_DIR = DIANCHI_DIR / "AII_200_new"
 STATIS_DATA_PATH = AII200_DIR / "Statis data.xlsx"
 
-EVO_PROMPTS_DIR = EVO_DIR / "prompts" / "battery_mmd"
-EVO_GPT_PATH = EVO_DIR / "problems" / "battery_mmd" / "gpt.py"
+EVO_PROMPTS_DIR = EVO_DIR / "prompts" / "battery_cddi"
+EVO_GPT_PATH = EVO_DIR / "problems" / "battery_cddi" / "gpt.py"
 DIANCHI_MMD_TOOLS_NEW = DIANCHI_DIR / "mmd_tools_new.py"
 # Pristine baseline that is NEVER modified by the pipeline. We restore from
 # this file whenever mmd_tools_new.py is detected to be polluted (e.g. a
@@ -60,7 +60,7 @@ class Settings(BaseSettings):
     """Centralized configuration with .env fallback.
 
     Resolution order for LLM credentials at runtime:
-        Settings panel (encrypted on-disk) > .env > Evo_Textgrad utils.API_CONFIGS
+        Settings panel (encrypted on-disk) > .env > battwise_cddi_search utils.API_CONFIGS
     """
 
     app_name: str = SYSTEM_NAME

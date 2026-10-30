@@ -50,7 +50,7 @@ are included. Search requires input data and a configured LLM endpoint.
 Example, after supplying compatible data and environment credentials:
 
 ```bash
-cd Evo_Textgrad_battery_eoh_deepseek
+cd battwise_cddi_search
 python main.py algorithm=reflective_metric_search case_num=[4] \
   model=your-provider-model max_fe=3 pop_size=4 batch_size=4
 ```

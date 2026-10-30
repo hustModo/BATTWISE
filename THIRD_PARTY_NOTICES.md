@@ -2,13 +2,13 @@
 
 ## EoH operator framework
 
-`Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/` contains an adapted EoH
+`battwise_cddi_search/baselines/eoh/` contains an adapted EoH
 implementation. The preserved source mapping identifies upstream revision
 `d7c5a69f4f6b70b475c5ef942f9c72675fe9ac71` of
 [FeiLiu36/EoH](https://github.com/FeiLiu36/EoH).
 
 The upstream [MIT license at that revision](https://raw.githubusercontent.com/FeiLiu36/EoH/d7c5a69f4f6b70b475c5ef942f9c72675fe9ac71/LICENSE)
-is included as `Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/LICENSE`.
+is included as `battwise_cddi_search/baselines/eoh/LICENSE`.
 The upstream source mapping and bibliographic attribution are retained in
 `baselines/eoh/readme.md`. These third-party authors and URLs must not be removed
 to imply original authorship of their operator framework.

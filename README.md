@@ -5,7 +5,7 @@ curve-discrepancy indicator discovery, clustering, and interactive refinement.
 The discovered scalar indicator is called **CDDI**; the combined method is
 **BATTWISE-CDDI**.
 
-This is the **review-code-20261029** code-only distribution. It contains application
+This is the **review-code-20261030** code-only distribution. It contains application
 and experiment implementations, not the manuscript's saved result tables or
 figures. See [release scope](docs/RELEASE_SCOPE.md) and
 [known limitations](docs/LIMITATIONS.md) before interpreting reproducibility claims.
@@ -46,21 +46,23 @@ input to CDDI discovery or clustering.
 ```text
 app/backend/                         FastAPI, agents, orchestration, services, tests
 app/frontend/                        React/TypeScript interface
-Evo_Textgrad_battery_eoh_deepseek/    Integrated reflective search; legacy path retained
+battwise_cddi_search/                BATTWISE-CDDI reflective search
 experiments/fair_1d_benchmark/       Data loading, representations, GA-KMeans, metrics
 experiments/statistics/              Friedman, paired Wilcoxon/Holm, stability, ARI
 programs/cddi/                       Frozen selected executable CDDI program
 comparisons/funsearch/               Preserved candidate code and scope explanation
-dianchi03/                          Compute reference code, without measured data
+battery_compute/                          Compute reference code, without measured data
 examples/                           Deterministic synthetic offline demo
 scripts/                            Release checks
 docs/                               Installation, protocols, scope, limitations
 deploy/                             Localhost launch scripts
 ```
 
-The historical search directory name is retained to keep imports and file
-contracts usable. It is not the public method name. Upstream EoH components are
-credited separately in [third-party notices](THIRD_PARTY_NOTICES.md).
+Search problems and prompts live under `battwise_cddi_search/problems/battery_cddi/`
+and `battwise_cddi_search/prompts/battery_cddi/`. Configuration names use
+`config_battery_cddi`. Upstream EoH and FunSearch retain their original names and
+attribution in [third-party notices](THIRD_PARTY_NOTICES.md). Historical function
+identifiers remain compatible with saved programs; the frozen CDDI code is unchanged.
 
 ## Quick offline demo
 
@@ -77,16 +79,22 @@ train a model, run a search, or reproduce a manuscript experiment.
 ## Tests
 
 ```bash
-python -m pytest experiments/fair_1d_benchmark/tests/test_data.py \
-  experiments/fair_1d_benchmark/tests/test_metrics.py \
-  experiments/fair_1d_benchmark/tests/test_battwise_cddi.py -q
-python app/backend/tests/test_cddi_compatibility.py
-python scripts/check_release.py
+python scripts/test_offline.py
 ```
 
-Application tests are standalone scripts. Benchmark tests use pytest. Some
-integration tests require measured input files or optional PyTorch dependencies;
-they are not implied by the short offline commands above.
+The command checks the release, frozen CDDI demo, benchmark contracts, renamed
+paths and all seven search configurations, both First-200s and All-200 evaluators
+on temporary synthetic workbooks, compatibility, and CLI startup. It exits
+nonzero on a failed check and needs no dataset download, API key, or LLM request.
+
+After installing the optional benchmark dependencies, include all benchmark tests:
+
+```bash
+python scripts/test_offline.py --full
+```
+
+Other application integration tests may require measured inputs or provider
+credentials. See [validation](docs/VALIDATION.md) for the checks actually run.
 
 ## Licensing and publication
 

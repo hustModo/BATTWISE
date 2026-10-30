@@ -12,7 +12,7 @@ KEY_PATTERN = re.compile(r"sk-[A-Za-z0-9_-]{12,}")
 
 def test_no_embedded_api_keys() -> None:
     checked = [
-        ROOT / "Evo_Textgrad_battery_eoh_deepseek" / "utils" / "utils.py",
+        ROOT / "battwise_cddi_search" / "utils" / "utils.py",
         ROOT / "docs" / "RELEASE_SCOPE.md",
     ]
     offenders = [

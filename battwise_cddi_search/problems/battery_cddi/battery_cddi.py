@@ -178,7 +178,7 @@ def get_problem_instance(config=None):
     # Default data paths (relative to this file)
     default_data_folder = os.path.join(
         os.path.dirname(__file__), 
-        '..', 'dianchi02', '200'
+        '..', 'battery_data', '200'
     )
     default_data_folder = os.path.abspath(default_data_folder)
     

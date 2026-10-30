@@ -192,7 +192,7 @@ class Problem:
                 traceback_msg = filter_traceback(stdout_str)
                 if traceback_msg == '':
                     try:
-                        # 优先解析"Error code:"格式（用于battery_mmd等新问题）
+                        # 优先解析"Error code:"格式（用于battery_cddi等新问题）
                         if "Error code:" in stdout_str:
                             for line in reversed(stdout_str.split('\n')):
                                 if line.strip().startswith("Error code:"):

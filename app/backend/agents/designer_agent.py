@@ -7,7 +7,7 @@ Two modes (driven by ``session.mode``):
   Emits agent_started / thinking / tool_call / code_update / artifact / agent_finished.
 
 * **reflective_search** — wraps ``services.reflective_search_runner``.
-  Spawns ``Evo_Textgrad_battery_eoh_deepseek/main.py`` as a child process,
+  Spawns ``battwise_cddi_search/main.py`` as a child process,
   tails its ``main.log`` and streams generation/objective progress plus the
   current best code (Monaco). Cancellable from the workbench.
 """
@@ -29,7 +29,7 @@ from app.backend.settings import EVO_DIR, EVO_GPT_PATH, settings
 
 # Lightweight defaults for the conversational Reflective Search path. The
 # upstream EoH configuration
-# config_battery_mmd.yaml ships max_fe=50, pop_size=20 — far too heavy for
+# config_battery_cddi.yaml ships max_fe=50, pop_size=20 — far too heavy for
 # an interactive demo. Combined with the historical seed pool (gen 0 is
 # already strong), these values give a meaningful but short evolution.
 REFLECTIVE_SEARCH_LIGHT_DEFAULTS: Dict[str, str] = {
@@ -306,7 +306,7 @@ class DesignerAgent(AgentBase):
         self,
         cells_filter: Optional[List[int]] = None,
     ) -> Dict[str, Any]:
-        """Spawn Evo_Textgrad/main.py and stream generation events.
+        """Spawn battwise_cddi_search/main.py and stream generation events.
 
         Two ergonomic upgrades on top of the attributed EoH operators:
 
@@ -316,7 +316,7 @@ class DesignerAgent(AgentBase):
            into ``session.context['eoh_user_params']``.
         2. **Historical seeding** — instead of random gen-0, we hand EOH a
            curated seed JSON built from prior winners under
-           ``Evo_Textgrad/outputs/output/<timestamp>/``. So even with
+           ``battwise_cddi_search/outputs/output/<timestamp>/``. So even with
            max_fe=3 the user sees movement off a strong starting point.
         """
         ctx = self.session.context
@@ -337,7 +337,7 @@ class DesignerAgent(AgentBase):
         overrides: List[str] = [f"{k}={v}" for k, v in resolved.items()]
 
         # Auto-select eval.py case based on active dataset.
-        # Mapping in problems/battery_mmd/eval.py:
+        # Mapping in problems/battery_cddi/eval.py:
         #   2 = first_200s, 4 = AII_200 / All-200
         ds_id = self.session.active_dataset_id
         selected_case: Optional[int] = None

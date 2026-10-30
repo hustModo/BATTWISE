@@ -2,7 +2,7 @@
 
 Pipeline:
     1. Pick the CDDI function:
-       - inject Evo_Textgrad gpt.py into dianchi03/mmd_tools_new.py
+       - inject battwise_cddi_search gpt.py into battery_compute/mmd_tools_new.py
        - reload it
     2. Run mmd_runner.compute_mmd_for_folder on the active dataset:
        - emit one 'tool_call' for the overall job
@@ -126,7 +126,7 @@ class ComputeAgent(AgentBase):
 
         inject_call_id = await self.tool_call(
             "mmd_runner.inject_mmd_code",
-            {"source": str(EVO_GPT_PATH), "target": "dianchi03/mmd_tools_new.py"},
+            {"source": str(EVO_GPT_PATH), "target": "battery_compute/mmd_tools_new.py"},
             status="running",
         )
         try:

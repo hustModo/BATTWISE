@@ -1,5 +1,5 @@
 {
-  "release": "review-code-20261029",
+  "release": "review-code-20261030",
   "source_files": [
     {
       "path": "app/backend/__init__.py",
@@ -802,202 +802,202 @@
       "source_sha256": "6cad8e0df28dd1bf4b765d2d86df444e88169539b2d2306d6439273840d90a1c"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/__init__.py",
+      "path": "battwise_cddi_search/baselines/__init__.py",
       "source_scope": "integrated search source",
       "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/__init__.py",
+      "path": "battwise_cddi_search/baselines/eoh/__init__.py",
       "source_scope": "integrated search source",
       "source_sha256": "3dcb98a4e2fbd9af0ab18433c8de719a2477c3a1ebf097a99c87fff0da2f4bea"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/eoh_adapter.py",
+      "path": "battwise_cddi_search/baselines/eoh/eoh_adapter.py",
       "source_scope": "integrated search source",
       "source_sha256": "74755476cadc40779cac07003d5d9ae5b4b55127387007b0bd618036eec86c1f"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/eoh.py",
       "source_scope": "integrated search source",
       "source_sha256": "cdaaf6f09d27722e70946445f4e5e97707b6ef818284a352b0e27e8f6f9bb09a"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh_evolution.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/eoh_evolution.py",
       "source_scope": "integrated search source",
       "source_sha256": "109b3e618e0926207faf2cad8abb1ce6c0c7e305e029c8ee6613199447cd486a"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/eoh_interface_EC.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/eoh_interface_EC.py",
       "source_scope": "integrated search source",
       "source_sha256": "af71ece08af01bb477945477ec3d955e2ae640ec40f23a9dc6734e385ead89a1"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/getParas.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/getParas.py",
       "source_scope": "integrated search source",
       "source_sha256": "7a5d2ce1024fa8a935f4d920d4cf5472f06c649bd2f694ed5c7281d74b080b09"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/interface_LLM.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/interface_LLM.py",
       "source_scope": "integrated search source",
       "source_sha256": "623906f707ced48e7c7c5a8c2bbba053c88296151d698f0b458b2c4e9ead9de9"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/pop_greedy.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/pop_greedy.py",
       "source_scope": "integrated search source",
       "source_sha256": "76c2a63bc7889470c5ec23b8d1c494e7783681e0c99d453d0ce1fcafaab8a704"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prob_rank.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/prob_rank.py",
       "source_scope": "integrated search source",
       "source_sha256": "7cae9f3b7cbf53b81aabd986267ea47ab53a9fbf4377f5d6e4e9d71397e2d32c"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prompts/bpp_online.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/prompts/bpp_online.py",
       "source_scope": "integrated search source",
       "source_sha256": "cfdc833c9c38b1d26e6cb640ae984951bf97a9b03f05a412a9b641cadf71ba62"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/original/prompts/tsp_greedy.py",
+      "path": "battwise_cddi_search/baselines/eoh/original/prompts/tsp_greedy.py",
       "source_scope": "integrated search source",
       "source_sha256": "a4daad6a12e6334b90a5532e2cde3e94747e1b949ee2e36321d195d1ebf44f77"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/problem_adapter.py",
+      "path": "battwise_cddi_search/baselines/eoh/problem_adapter.py",
       "source_scope": "integrated search source",
       "source_sha256": "fa2718da14d76466ec4509771a9741a27692031ba6b3cbcd3e899fc12a450123"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/baselines/eoh/readme.md",
+      "path": "battwise_cddi_search/baselines/eoh/readme.md",
       "source_scope": "integrated search source",
       "source_sha256": "da87b2232c11f8d058693933ddf0863ddf7de62ac7ecba1ca0bf90a57df6e8b9"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "37a958efa47ee71d8fc4932bfcaf7f3e8614db950b537acad02d9148794556d5"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_100s.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_100s.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "1516907e3a0d7000fb1a2d9c35d9f1272bdaaa64e8c6904cab4a11f01b7fbd27"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_200s.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_200s.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "fd4ed202913830f2ba249e52b78941ded1c2a98984c749bfdbfbf3b983435f33"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_500s.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_500s.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "d7ae500068e59409e5e223594d05961fe3d23818461ff99225fc6971d74fb6e6"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_aii200.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_aii200.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "3651a2466e91308332cfc2db199fbc82be8c214d3dfa7d3848ef415b6072a03a"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_cc200.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_cc200.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "3176ce2350778adce3cabed7769b1b21ba1bb017dfaa765edbd65ff403f38811"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/config_battery_mmd_cv100.yaml",
+      "path": "battwise_cddi_search/cfg/config_battery_cddi_cv100.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "ef5da1abeadcca68a88f0d30f956c6b836499cfa63d0575e137877c663dbbd13"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/hydra/output/local.yaml",
+      "path": "battwise_cddi_search/cfg/hydra/output/local.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "b5072b10aeed8777c6db1a15b2060d284ddb0c4fc17b61abd95178d524f3983f"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd.yaml",
+      "path": "battwise_cddi_search/cfg/problem/battery_cddi.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "5d0584e3ff823bad1b73581b7035b8bf594456383d7300b570901f66e7fb5902"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd_back.yaml",
+      "path": "battwise_cddi_search/cfg/problem/battery_cddi_back.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "7a49872fefa3ef033c753bb21b189e9070273382eb6cf66ec92887cac68ef8cc"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/cfg/problem/battery_mmd_cv.yaml",
+      "path": "battwise_cddi_search/cfg/problem/battery_cddi_cv.yaml",
       "source_scope": "integrated search source",
       "source_sha256": "fe8b48f950c16315535e5c204a8865c82b0a52c126407196aa58e3025244fb2c"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/eoh_textgrad.py",
+      "path": "battwise_cddi_search/eoh_textgrad.py",
       "source_scope": "integrated search source",
       "source_sha256": "587b16102e9699cc74c85faf2944f48bc5d10a2b6af6f5e326221d1de34d25f8"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/main.py",
+      "path": "battwise_cddi_search/main.py",
       "source_scope": "integrated search source",
       "source_sha256": "cff3589606b0340b635eaeaef2706eb8a54cc6300c7631e74433176775de70b8"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/__init__.py",
+      "path": "battwise_cddi_search/problems/battery_cddi/__init__.py",
       "source_scope": "integrated search source",
       "source_sha256": "9d3e9ee96e3cf14955d74cc0b45dae364ed0213aec0ceba19896b84011d895f2"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/battery_mmd.py",
+      "path": "battwise_cddi_search/problems/battery_cddi/battery_cddi.py",
       "source_scope": "integrated search source",
       "source_sha256": "ce7535d7a74297658cbf62e1b74752ccc5f616c80aaf19906a38631a8ff66786"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/eval.py",
+      "path": "battwise_cddi_search/problems/battery_cddi/eval.py",
       "source_scope": "integrated search source",
       "source_sha256": "b28e024ca65fa93cc9c77a44ded573ffbd963d775b9d0d3aef2ff711a9b00fc2"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/problems/battery_mmd/gpt.py",
+      "path": "battwise_cddi_search/problems/battery_cddi/gpt.py",
       "source_scope": "integrated search source",
       "source_sha256": "97c9fafa686e969f1ee57e4a49f9aefdfbd5982e5f4ebadd0190fa2d4b455684"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/external_knowledge.txt",
+      "path": "battwise_cddi_search/prompts/battery_cddi/external_knowledge.txt",
       "source_scope": "integrated search source",
       "source_sha256": "14a2013b2826f799908a342a2d8e0b65cb5a812d88bdabcce35395e774e33363"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/func_desc.txt",
+      "path": "battwise_cddi_search/prompts/battery_cddi/func_desc.txt",
       "source_scope": "integrated search source",
       "source_sha256": "3709e03976b7920805266a9a01f7211aace8d3552232b37c7d9a34624fabe8c2"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/func_signature.txt",
+      "path": "battwise_cddi_search/prompts/battery_cddi/func_signature.txt",
       "source_scope": "integrated search source",
       "source_sha256": "7c75a9a4822af038ee3e0609a135f4b1083fb6eb3528ec6ca9f53e3ec5630b32"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/prompts/battery_mmd/seed_func.txt",
+      "path": "battwise_cddi_search/prompts/battery_cddi/seed_func.txt",
       "source_scope": "integrated search source",
       "source_sha256": "71583e9f4ed1381ccb2ea7f4b5374ffe360e4b8ee17b4d1cf4a39f71d369579c"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/reflective_metric_search.py",
+      "path": "battwise_cddi_search/reflective_metric_search.py",
       "source_scope": "integrated search source",
       "source_sha256": "62cb4c6cccece4eff1feefaf075304b1388b6203adc6f12d2a85d8859075a072"
     },
     {
-      "path": "Evo_Textgrad_battery_eoh_deepseek/utils/utils.py",
+      "path": "battwise_cddi_search/utils/utils.py",
       "source_scope": "integrated search source",
       "source_sha256": "4ea401548089c771f888625b630a81b9c48031cd73e3dfe9b7d2afa583fae429"
     },
     {
-      "path": "dianchi03/mmd_tools.py",
+      "path": "battery_compute/mmd_tools.py",
       "source_scope": "compute reference implementation",
       "source_sha256": "ff72330e789df3687b9f78c0fc1ba7afe7695ba2b533a0b96c4a4e4e8ad589ae"
     },
     {
-      "path": "dianchi03/mmd_tools_new.baseline.py",
+      "path": "battery_compute/mmd_tools_new.baseline.py",
       "source_scope": "compute reference implementation",
       "source_sha256": "a935f247ae968cc2696dfc162f72e2bc6d8538682538c210ecb95f0076bec99c"
     },
     {
-      "path": "dianchi03/mmd_tools_new.py",
+      "path": "battery_compute/mmd_tools_new.py",
       "source_scope": "clean runtime baseline; no session candidate",
       "source_sha256": "a935f247ae968cc2696dfc162f72e2bc6d8538682538c210ecb95f0076bec99c"
     },
@@ -1027,7 +1027,11 @@
     "Omitted saved candidate objective from benchmark metadata",
     "Adapted source-hygiene documentation fixture to the review release scope",
     "Root dependency files describe the observed validation environment; upstream backend pins retained as historical evidence",
-    "Preserved the upstream MIT license from its identified revision"
+    "Preserved the upstream MIT license from its identified revision",
+    "Canonical search, problem, prompt, configuration and compute paths use BATTWISE/CDDI names",
+    "Added a runnable offline suite, synthetic evaluator checks and historical saved-candidate filename compatibility",
+    "Removed stale problem-package initializer imports; the supported search evaluator and frozen CDDI program are preserved"
   ],
-  "historical_identity": "No main-project Git commit was available; a new release repository must not be represented as the historical experiment commit."
+  "historical_identity": "No main-project Git commit was available; a new release repository must not be represented as the historical experiment commit.",
+  "source_hash_note": "source_sha256 records the originally imported source before packaging edits; MANIFEST.sha256 records the current release files."
 }

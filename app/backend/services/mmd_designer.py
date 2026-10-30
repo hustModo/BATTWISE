@@ -1,7 +1,7 @@
 """CDDI Designer service (Lightweight mode).
 
 Pipeline:
-    1. Assemble prompt from Evo_Textgrad prompts/battery_mmd/*.txt
+    1. Assemble prompt from battwise_cddi_search prompts/battery_cddi/*.txt
     2. Call LLM (single shot)
     3. Extract calculate_mmd_vN code block
     4. Sandbox: run on N random cells × Model file
@@ -270,7 +270,7 @@ def _cell_number(path: Path) -> int:
 # Reference (seed) MMD for sanity check. Imported lazily so circular import
 # doesn't bite — see `_seed_mmd` below.
 def _seed_mmd(xs: np.ndarray, xt: np.ndarray) -> float:
-    """The exact baseline from prompts/battery_mmd/seed_func.txt — simple
+    """The exact baseline from prompts/battery_cddi/seed_func.txt — simple
     multi-kernel RBF on the RAW signal. Used as a correctness oracle: a good
     LLM-generated MMD should produce values whose *ranking* across cells is
     similar (Pearson |r| >= SANITY_THRESHOLD) to this seed."""
@@ -476,7 +476,7 @@ def design_mmd(
         max_attempts: defaults to settings.designer_max_repair_attempts.
         sandbox_cells: defaults to settings.designer_sandbox_cells.
         version: function suffix `calculate_mmd_vN`.
-        write_back: write to Evo_Textgrad gpt.py on success.
+        write_back: write to battwise_cddi_search gpt.py on success.
         on_attempt: optional callback invoked with each DesignAttempt (for live UI).
         on_log: optional ``(tag, line)`` callback for fine-grained progress —
             invoked at prompt build, LLM call start/end, sandbox start/end,

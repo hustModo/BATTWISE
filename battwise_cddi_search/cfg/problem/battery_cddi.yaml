@@ -1,4 +1,4 @@
-problem_name: battery_mmd
+problem_name: battery_cddi
 problem_type: function_optimization
 obj_type: max  # Maximize mean_sig (correlation coefficient)
 problem_size: null  # Not applicable for battery data
@@ -6,7 +6,7 @@ func_name: calculate_mmd
 description: Optimizing MMD (Maximum Mean Discrepancy) calculation functions for battery recycling applications. The goal is to maximize correlation between MMD loss and battery electrochemical features, enabling effective battery performance assessment based on charging curve differences.
 
 # Battery-specific configurations
-data_folder: problems/dianchi02/200
+data_folder: problems/battery_data/200
 model_filename: Model_200.xls
 char_filename: Charging_curve_characteristics.xlsx
 row_start: 0

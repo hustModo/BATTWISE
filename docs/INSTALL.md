@@ -27,6 +27,17 @@ supersede the older backend pins retained in `app/backend/requirements.txt` for
 provenance. Do not install a source tree's historical requirements into a running
 production environment merely to inspect this release.
 
+## Verify the installation offline
+
+```bash
+python scripts/test_offline.py
+```
+
+This runs actual synthetic computations and returns a nonzero exit code if a
+check fails. No measured data or LLM credentials are needed. To include the
+optional neural representation tests after installing their dependencies, run
+`python scripts/test_offline.py --full`.
+
 ## Frontend
 
 ```bash

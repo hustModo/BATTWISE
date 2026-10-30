@@ -97,7 +97,7 @@ def test_new_and_saved_tables() -> None:
 def test_periodic_reflection_callback() -> None:
     # Compile only the callback so this regression never imports search clients
     # or starts a search. Execute its real periodic-update branch with stubs.
-    source = ROOT / "Evo_Textgrad_battery_eoh_deepseek/reflective_metric_search.py"
+    source = ROOT / "battwise_cddi_search/reflective_metric_search.py"
     tree = ast.parse(source.read_text(encoding="utf-8"))
     cls = next(node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == "ReflectiveMetricSearch")
     callback = next(node for node in cls.body if isinstance(node, ast.FunctionDef) and node.name == "_reflection_callback")

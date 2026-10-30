@@ -5,7 +5,7 @@
 # replacements into. Restored after the timeout regression test pollutes
 # this file with a hanging stub.
 #
-# Reference implementation: dianchi03/mmd_tools.py (the original
+# Reference implementation: battery_compute/mmd_tools.py (the original
 # `MMD_cal` function) — renamed to `MMD_cal_new` so it matches the
 # function name the rest of the pipeline expects.
 # ============================================================================

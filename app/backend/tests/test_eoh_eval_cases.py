@@ -6,15 +6,15 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-EVO = ROOT / "Evo_Textgrad_battery_eoh_deepseek"
-EVAL = EVO / "problems" / "battery_mmd" / "eval.py"
+EVO = ROOT / "battwise_cddi_search"
+EVAL = EVO / "problems" / "battery_cddi" / "eval.py"
 
 
 def _load_eval_for_case(case: int):
     old_argv = list(sys.argv)
     try:
         sys.argv = [str(EVAL), str(EVO), "train", str(case), "0"]
-        spec = importlib.util.spec_from_file_location(f"battery_mmd_eval_case_{case}", EVAL)
+        spec = importlib.util.spec_from_file_location(f"battery_cddi_eval_case_{case}", EVAL)
         assert spec and spec.loader
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)

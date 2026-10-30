@@ -1,7 +1,7 @@
 """BATTWISE reflective-search subprocess wrapper.
 
 Responsibilities:
-    * Spawn ``Evo_Textgrad_battery_eoh_deepseek/main.py`` as a child process
+    * Spawn ``battwise_cddi_search/main.py`` as a child process
       with user-supplied Hydra overrides (case, max_fe, pop_size, model, ...).
     * Locate the output directory the child creates under
       ``outputs/output/<timestamp>/`` and tail its ``main.log``.

@@ -1,6 +1,6 @@
 """Offline tests for eoh_runner.parse_log_line + load_best_code_from_json.
 
-Uses the real ``Evo_Textgrad_battery_eoh_deepseek/outputs/output/<ts>/main.log``
+Uses the real ``battwise_cddi_search/outputs/output/<ts>/main.log``
 files already on disk so no subprocess is spawned.
 """
 from __future__ import annotations

@@ -98,7 +98,7 @@ def main(argv: list[str] | None = None) -> int:
 
     _emit({"phase": "_imports_done", "t": time.time()})
 
-    # Load the LLM-injected MMD_cal_new from dianchi03/mmd_tools_new.py.
+    # Load the LLM-injected MMD_cal_new from battery_compute/mmd_tools_new.py.
     try:
         mmd_fn = mmd_runner.load_injected_function()
     except Exception as exc:  # noqa: BLE001

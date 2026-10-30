@@ -1,7 +1,7 @@
 project_root: ../..
 
 dataset:
-  data_dir: dianchi03/AII_200_new
+  data_dir: battery_compute/AII_200_new
   expected_cells: 71
   expected_points: 200
 

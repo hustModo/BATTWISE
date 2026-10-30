@@ -61,9 +61,9 @@ case "$TARGET" in
         #
         # The agents in this project legitimately write Python files to
         # disk while running:
-        #   * DesignerAgent → Evo_Textgrad_*/problems/battery_mmd/gpt.py
-        #   * ComputeAgent  → dianchi03/mmd_tools_new.py
-        #   * EOH runner    → Evo_Textgrad_*/outputs/.../*.py
+        #   * DesignerAgent → battwise_cddi_search/problems/battery_cddi/gpt.py
+        #   * ComputeAgent  → battery_compute/mmd_tools_new.py
+        #   * EOH runner    → battwise_cddi_search/outputs/.../*.py
         #
         # uvicorn 0.32 + watchfiles 1.2 has a hard-to-disable behaviour
         # (see WatchFilesReload.__init__): any `--reload-dir` that is a

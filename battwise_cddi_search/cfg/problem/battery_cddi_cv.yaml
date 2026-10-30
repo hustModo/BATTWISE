@@ -1,5 +1,5 @@
 # Battery MMD - CV数据集配置
-problem_name: battery_mmd
+problem_name: battery_cddi
 problem_type: function_optimization
 obj_type: max
 problem_size: null
@@ -7,7 +7,7 @@ func_name: calculate_mmd
 description: Battery MMD optimization using CV dataset
 
 # 电池数据配置 - CV数据集
-data_folder: problems/dianchi02/CV
+data_folder: problems/battery_data/CV
 model_filename: Model_CV_process.xlsx
 char_filename: Electrochemical indicators.xlsx
 row_start: 0

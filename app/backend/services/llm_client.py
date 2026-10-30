@@ -3,7 +3,7 @@
 Resolution order:
     1. Settings panel (encrypted JSON in workspace/config/llm.json.enc)
     2. Environment variables (.env loaded via pydantic-settings)
-    3. Evo_Textgrad utils.utils.API_CONFIGS (built-in dev fallback)
+    3. battwise_cddi_search utils.utils.API_CONFIGS (built-in dev fallback)
 """
 from __future__ import annotations
 
@@ -76,11 +76,11 @@ def _promote_if_deprecated(name: str) -> str:
 
 
 def _from_builtin() -> Optional[ResolvedConfig]:
-    """Last-resort fallback: import Evo_Textgrad API_CONFIGS without triggering its client init."""
+    """Last-resort fallback: import battwise_cddi_search API_CONFIGS without triggering its client init."""
     try:
         import sys
 
-        evo_path = str(REPO_ROOT / "Evo_Textgrad_battery_eoh_deepseek")
+        evo_path = str(REPO_ROOT / "battwise_cddi_search")
         if evo_path not in sys.path:
             sys.path.append(evo_path)
         from utils.utils import API_CONFIGS  # type: ignore
@@ -131,7 +131,7 @@ def resolve_config() -> ResolvedConfig:
         return builtin
     raise RuntimeError(
         "No LLM credentials available. Configure via Settings panel, .env, "
-        "or Evo_Textgrad utils API_CONFIGS."
+        "or battwise_cddi_search utils API_CONFIGS."
     )
 
 

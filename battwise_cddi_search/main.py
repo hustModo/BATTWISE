@@ -14,7 +14,7 @@ ROOT_DIR = os.getcwd() # 获取当前目录
 import sys
 python_executable = sys.executable
 logging.basicConfig(level=logging.INFO) # 配置日志记录系统
-@hydra.main(version_base=None, config_path="cfg", config_name="config_battery_mmd")
+@hydra.main(version_base=None, config_path="cfg", config_name="config_battery_cddi")
 
 def main(cfg):
     workspace_dir = Path.cwd()

@@ -49,13 +49,13 @@ operator_weights:
 
 # 问题配置
 problem:
-  problem_name: battery_mmd
+  problem_name: battery_cddi
   description: "Battery MMD Function Optimization for Recycling Applications"
   problem_size: null
   func_name: calculate_mmd
   obj_type: max
   problem_type: function_optimization
-  data_folder: problems/dianchi02/first_100s
+  data_folder: problems/battery_data/first_100s
   model_filename: Model_first_100s.xls
   char_filename: Charging_curve_characteristics.xlsx
   row_start: 0
@@ -72,4 +72,4 @@ log_level: INFO
 # 输出配置
 save_intermediate_results: true
 save_reflections: true
-output_dir: "./outputs/battery_mmd_100s"
+output_dir: "./outputs/battery_cddi_100s"

@@ -3,6 +3,23 @@
 这是 BATTWISE / BATTWISE-CDDI 的代码与实验实现分发包。
 完整入口见 [英文 README](README.md)。
 
+## 安装后直接测试
+
+在仓库根目录执行：
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/test_offline.py
+```
+
+测试使用临时合成数据，实际运行 CDDI 计算、First-200s 与 All-200 评估、
+配置加载、兼容回归及入口启动，不需要 API key 或真实实验数据。
+任一检查失败会返回非零退出码。安装可选 PyTorch 依赖后，可执行
+`python scripts/test_offline.py --full` 加入全部基准方法单元测试。
+
+搜索目录为 `battwise_cddi_search/`，内部问题及提示词目录为 `battery_cddi/`，
+计算模块目录为 `battery_compute/`。导入、配置和文档路径同步更新。
+
 ## 本轮包含
 
 - 多智能体系统、前端、路由、规划、对话与流程状态管理。

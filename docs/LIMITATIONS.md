@@ -11,6 +11,10 @@
   No exact search-trajectory replay is promised.
 - Measured-data experiments cannot be reproduced from a code-only package alone.
 - FunSearch candidate functions do not constitute a complete FunSearch runner.
+- The historical `battery_cddi.py` problem-class wrapper expects evaluation
+  helpers that are absent from the replaceable candidate program. It is retained
+  for provenance and is not a supported entry point. Use the documented search
+  CLI and `problems/battery_cddi/eval.py`; both are covered by offline checks.
 - Observed optional deep-model dependencies do not establish the complete
   historical training environment; see `REPRODUCIBILITY.md`.
 - The battery-pack work is proof-of-concept pack-level validation. No new pack
