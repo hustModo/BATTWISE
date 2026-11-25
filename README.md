@@ -1,11 +1,12 @@
 # BATTWISE
 
-**BATTWISE** is a hierarchical multi-agent workflow for retired-battery triage,
-curve-discrepancy indicator discovery, clustering, and interactive refinement.
-The discovered scalar indicator is called **CDDI**; the combined method is
-**BATTWISE-CDDI**.
+**Battery agentic triage and testing workflow with internal state evidence (BATTWISE)** sorts retired cells using their charging curves. First-200s presorting uses the first 200 seconds of charging. For a selected group, All-200 refinement uses 200 uniformly sampled current–voltage pairs from each complete curve.
 
-This is the **review-code-20261030** code-only distribution. It contains application
+![Retired-cell presorting and targeted refinement using synthetic curves](docs/media/retired-cell-sorting.gif)
+
+The workbench replay follows a synthetic batch from a cell/reference curve comparison to one **charging curve distribution discrepancy indicator (CDDI)** per cell. GA-KMeans groups cells using CDDI, open circuit voltage (OCV) and internal resistance (IR). A second pass refines a selected group.
+
+This is the **review-code-20261125** review distribution. It contains application
 and experiment implementations, not the manuscript's saved result tables or
 figures. See [release scope](docs/RELEASE_SCOPE.md) and
 [known limitations](docs/LIMITATIONS.md) before interpreting reproducibility claims.
@@ -41,12 +42,20 @@ and selected-group refinement. Capacity and the 33 external validation indicator
 are evaluation-only. A 2 Ah threshold may select a refinement cohort; it is not an
 input to CDDI discovery or clustering.
 
+## CDDI program discovery
+
+Router and Planner organize the tasks. Designer proposes executable programs that compare a cell curve with a reference response. Seventeen charging curve descriptors guide candidate scoring. Compute checks and executes the selected program. The formal All-200 benchmark reports the frozen method as **BATTWISE-CDDI**.
+
+![CDDI program discovery illustrated with a seed candidate and synthetic descriptor values](docs/media/cddi-program-discovery.gif)
+
+This offline illustration evaluates the supplied seed on synthetic First-200s curves. The refinement illustration uses the frozen All-200 executable on the selected subset. These workbook-free examples illustrate the interfaces of dataset-specific programs.
+
 ## Repository layout
 
 ```text
 app/backend/                         FastAPI, agents, orchestration, services, tests
 app/frontend/                        React/TypeScript interface
-battwise_cddi_search/                BATTWISE-CDDI reflective search
+battwise_cddi_search/                CDDI program discovery in the Designer
 experiments/fair_1d_benchmark/       Data loading, representations, GA-KMeans, metrics
 experiments/statistics/              Friedman, paired Wilcoxon/Holm, stability, ARI
 programs/cddi/                       Frozen selected executable CDDI program

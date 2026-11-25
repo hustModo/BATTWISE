@@ -78,8 +78,8 @@ export function ReflectiveSearchProgressChart() {
               search.running ? "bg-emerald-400 animate-pulse" : "bg-slate-500",
             )}
           />
-          <h3 className="text-sm font-semibold text-slate-100">
-            BATTWISE Reflective Search
+          <h3 className="text-sm font-semibold text-slate-800">
+            CDDI program discovery
           </h3>
           <span className="text-xs text-slate-400">
             gen {search.current_generation}

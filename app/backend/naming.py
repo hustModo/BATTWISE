@@ -10,7 +10,7 @@ SYSTEM_NAME = "BATTWISE"
 METRIC_NAME = "CDDI"
 METHOD_NAME = "BATTWISE-CDDI"
 SYSTEM_LONG_NAME = (
-    "Battery Agentic Triage and Testing Workflow with Internal-State Evidence"
+    "Battery agentic triage and testing workflow with internal state evidence"
 )
 
 LIGHTWEIGHT_MODE = "lightweight"

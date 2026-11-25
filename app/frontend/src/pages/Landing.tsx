@@ -9,15 +9,15 @@ const STEPS = [
   },
   {
     title: "2. Design",
-    desc: "An LLM agent designs a CDDI scoring function that is NaN-safe and correlates with cell features.",
+    desc: "Designer proposes programs. Seventeen charging curve descriptors guide scoring. Compute checks each selected program.",
   },
   {
     title: "3. Cluster",
     desc: "Adaptive GA-KMeans groups cells by OCV / IR / CDDI with multi-objective fitness.",
   },
   {
-    title: "4. Recycle",
-    desc: "Per-cluster recommendation: Direct Reuse, Second-life, or Material Recycle.",
+    title: "4. Refine",
+    desc: "Select a group for All-200 refinement using 200 current–voltage pairs sampled uniformly from each complete curve.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Landing() {
           <div>
             <div className="font-semibold tracking-wide">BATTWISE</div>
             <div className="text-xs text-slate-500">
-              Industrial Multi-Agent System for Battery Sorting &amp; Recycling
+              Battery agentic triage and testing workflow with internal state evidence
             </div>
           </div>
         </div>
@@ -65,9 +65,9 @@ export default function Landing() {
             transition={{ duration: 0.4 }}
             className="text-4xl md:text-5xl font-bold text-battery-ink leading-tight"
           >
-            From charging curves to recycling decisions —
+            Sort retired cells
             <br className="hidden md:block" />
-            <span className="text-battery-electrolyte"> orchestrated by agents.</span>
+            <span className="text-battery-electrolyte"> using their charging curves.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -75,10 +75,9 @@ export default function Landing() {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="mt-5 text-slate-600 max-w-3xl"
           >
-            Six cooperating agents — Router, CDDI&nbsp;Designer, CDDI&nbsp;Compute, Cluster,
-            Refinement, Chat — walk you from a first-200s charging batch to a defensible,
-            data-driven recycling plan. Every step shows the reasoning, the data, and the
-            artifacts.
+            Router and Planner organize the sorting tasks. Designer and Compute turn a cell curve
+            and a reference response into one charging curve distribution discrepancy indicator
+            (CDDI) per cell. Inspect the groups and select cells for refinement.
           </motion.p>
 
           <div className="mt-10 grid md:grid-cols-4 gap-4">

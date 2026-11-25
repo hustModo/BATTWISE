@@ -382,7 +382,7 @@ class DesignerAgent(AgentBase):
                 await self._log_llm("warn", f"Seed build failed (continuing without): {exc}")
 
         await self.thinking(
-            f"Starting BATTWISE Reflective Search. dataset={ds_id}, overrides={overrides}. "
+            f"Starting CDDI program discovery in Reflective Search mode. dataset={ds_id}, overrides={overrides}. "
             "This may take several minutes; live progress will stream below."
         )
 

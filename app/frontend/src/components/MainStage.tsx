@@ -15,7 +15,7 @@ import useSession from "@/store/sessionStore";
 type TabId = "design" | "compute" | "cluster" | "decisions" | "refine";
 
 const TABS: { id: TabId; label: string; node: string }[] = [
-  { id: "design", label: "Design", node: "designer" },
+  { id: "design", label: "CDDI program discovery", node: "designer" },
   { id: "compute", label: "Compute", node: "compute" },
   { id: "cluster", label: "Cluster", node: "cluster" },
   { id: "decisions", label: "Decisions", node: "cluster" },

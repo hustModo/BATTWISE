@@ -13,8 +13,9 @@ permanent DOI archive.
 3. Use a neutral mirror identifier, choose the expiration policy, and include
    project-author names, affiliations, emails and identifying account names as
    anonymization terms where needed.
-4. Disable optional images/PDFs and external links unless their anonymity has
-   been checked. This release includes no paper figures or PDFs.
+4. Enable images for the two synthetic workbench demonstrations under
+   `docs/media/`. Verify both animations from the anonymous README after each
+   update. Keep PDFs disabled and review external links for anonymity.
 5. Inspect the resulting README, source tree, download, and external links from
    the anonymous view before inserting the URL into the manuscript.
 

@@ -23,7 +23,7 @@ from app.backend.orchestrator.session_store import Session  # noqa: E402
 def main() -> None:
     assert SYSTEM_NAME == "BATTWISE"
     assert SYSTEM_LONG_NAME == (
-        "Battery Agentic Triage and Testing Workflow with Internal-State Evidence"
+        "Battery agentic triage and testing workflow with internal state evidence"
     )
     assert LIGHTWEIGHT_MODE == "lightweight"
     assert REFLECTIVE_SEARCH_MODE == "reflective_search"

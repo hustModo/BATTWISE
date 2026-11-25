@@ -1,6 +1,14 @@
 # BATTWISE 代码审稿包
 
-这是 BATTWISE / BATTWISE-CDDI 的代码与实验实现分发包。
+**Battery agentic triage and testing workflow with internal state evidence (BATTWISE)** 用充电曲线对退役电芯进行预分选，再对选定的组进行精分。First-200s 取充电开始后的 200 秒，All-200 从完整充电曲线均匀采样 200 对电流、电压值。
+
+![用合成曲线演示退役电芯预分选与选定组精分](docs/media/retired-cell-sorting.gif)
+
+Router 和 Planner 组织任务，Designer 提出可执行的候选程序，用 17 个充电曲线描述符指导评分。Compute 检查并运行程序，每个电芯得到一个充电曲线分布差异指标（charging curve distribution discrepancy indicator，CDDI）。Cluster 用 OCV、IR 和 CDDI 进行 GA-KMeans 分组。正式 All-200 基准中的方法名为 **BATTWISE-CDDI**。
+
+![用种子程序和合成描述符演示 CDDI 程序发现](docs/media/cddi-program-discovery.gif)
+
+动画回放采用合成数据。短窗口示例运行仓库中的种子程序，精分示例在选定组上运行冻结的 All-200 程序。
 完整入口见 [英文 README](README.md)。
 
 ## 安装后直接测试

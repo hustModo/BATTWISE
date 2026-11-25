@@ -40,7 +40,7 @@ table. No new candidate selection was performed while preparing this release.
 The benchmark applies a post-processing factor of `1e5`, as recorded in the
 configuration. Do not conflate that scaling with the discovered function itself.
 
-## Reflective discovery
+## CDDI program discovery
 
 The integrated search is in `reflective_metric_search.py`. The default reflection
 templates are embedded in its source and materialized when needed. Battery
