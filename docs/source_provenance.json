@@ -1,5 +1,5 @@
 {
-  "release": "review-code-20261125",
+  "release": "review-code-20261125-workbench",
   "source_files": [
     {
       "path": "app/backend/__init__.py",

@@ -8,7 +8,7 @@ Router 和 Planner 组织任务，Designer 提出可执行的候选程序，用 
 
 ![用种子程序和合成描述符演示 CDDI 程序发现](docs/media/cddi-program-discovery.gif)
 
-动画回放采用合成数据。短窗口示例运行仓库中的种子程序，精分示例在选定组上运行冻结的 All-200 程序。
+两张动画均录自原版 BATTWISE 工作台，使用合成数据回放会话。短窗口示例运行仓库中的种子程序，精分示例在选定组上运行冻结的 All-200 程序。
 完整入口见 [英文 README](README.md)。
 
 ## 安装后直接测试

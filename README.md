@@ -4,9 +4,9 @@
 
 ![Retired-cell presorting and targeted refinement using synthetic curves](docs/media/retired-cell-sorting.gif)
 
-The workbench replay follows a synthetic batch from a cell/reference curve comparison to one **charging curve distribution discrepancy indicator (CDDI)** per cell. GA-KMeans groups cells using CDDI, open circuit voltage (OCV) and internal resistance (IR). A second pass refines a selected group.
+The recording shows the original BATTWISE workbench replaying synthetic session events. Compute reports one **charging curve distribution discrepancy indicator (CDDI)** per cell. GA-KMeans groups cells using CDDI, open circuit voltage (OCV) and internal resistance (IR). A second pass refines a selected group.
 
-This is the **review-code-20261125** review distribution. It contains application
+This is the **review-code-20261125-workbench** review distribution. It contains application
 and experiment implementations, not the manuscript's saved result tables or
 figures. See [release scope](docs/RELEASE_SCOPE.md) and
 [known limitations](docs/LIMITATIONS.md) before interpreting reproducibility claims.
