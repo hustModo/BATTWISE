@@ -1,0 +1,107 @@
+# Paths are resolved from this file. ../.. is the project root.
+project_root: ../..
+
+dataset:
+  data_dir: dianchi03/AII_200_new
+  expected_cells: 71
+  expected_points: 200
+
+clustering:
+  k: 6
+  pop_size: 200
+  max_iter: 80
+  seeds:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+
+output_dir: experiments/fair_1d_benchmark/results
+
+methods:
+  battwise_cddi:
+    class_path: experiments.fair_1d_benchmark.methods.battwise_cddi:BATTWISECDDReducer
+    kwargs:
+      # Generation 20 is the best saved candidate that returns finite values
+      # for all 71 All_200 cells. Generation 42 has the better stored objective
+      # but produces NaN because its mutual-information weights sum to zero.
+      source_json: dianchi03/code_json/best_population_generation_20.json
+      output_scale: 100000.0
+      fix_sigma: 0.0
+      kernel_mul: 2.0
+      kernel_num: 5
+  kpca_1d:
+    class_path: experiments.fair_1d_benchmark.methods.kpca_1d:KPCA1DReducer
+    kwargs: {}
+  fc_vae_1d:
+    class_path: experiments.fair_1d_benchmark.methods.fc_vae_1d:FCVAE1DReducer
+    kwargs:
+      hidden_dims:
+        - 64
+        - 16
+      beta_kl: 0.001
+      encoder_aux_weight: 1.0
+      decoder_aux_weight: 1.0
+      lr: 0.0001
+      max_epochs: 1000
+      patience: 50
+      min_delta: 0.000001
+      device: cpu
+  decm_1d:
+    class_path: experiments.fair_1d_benchmark.methods.decm_1d:DECM1DReducer
+    kwargs:
+      # Applied Energy 388 (2025) 125677, Eqs. (3)-(4) pretraining
+      # followed by decoder-free alternating K-means/Eq. (10) updates.
+      # The paper does not report epochs or early-stopping values.
+      hidden_dims:
+        - 64
+        - 16
+      pretrain_epochs: 1000
+      joint_epochs: 100
+      lr: 0.001
+      patience: 50
+      min_delta: 0.000001
+      beta1: 1.0
+      beta2: 0.01
+      phi: 0.5
+      internal_clusters: 6
+      scatter_regularization: 0.000001
+      device: cpu
+  ocv_ir:
+    class_path: experiments.fair_1d_benchmark.methods.ocv_ir_control:OCVIRControl
+    kwargs: {}
+
+metadata:
+  public_method_name: BATTWISE-CDDI
+  comparison_scope: All_200 only
+  generated_scorer_selection:
+    selected: best_population_generation_20.json
+    selected_objective: -0.75107
+    rejected:
+      best_population_generation_42.json: non-finite output on All_200

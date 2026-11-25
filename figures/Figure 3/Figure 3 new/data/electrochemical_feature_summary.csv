@@ -1,0 +1,5 @@
+baseline_key,baseline,features_battwise_better,features_tied,features_battwise_worse,mean_absolute_improvement,median_relative_improvement_pct
+kpca_1d,KPCA-1D,24,0,9,0.03380571000154355,15.43174812796748
+fc_vae_1d,FC-VAE-1D,21,0,12,-0.0023254969156300477,2.061147035744077
+decm_1d,DECM-1D,26,0,7,0.02528064647088236,14.222566265577093
+ocv_ir,OCV-IR,21,0,12,0.012420639831136551,10.52043793741622

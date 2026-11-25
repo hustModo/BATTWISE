@@ -6,10 +6,10 @@
 
 The recording shows the original BATTWISE workbench replaying synthetic session events. Compute reports one **charging curve distribution discrepancy indicator (CDDI)** per cell. GA-KMeans groups cells using CDDI, open circuit voltage (OCV) and internal resistance (IR). A second pass refines a selected group.
 
-This is the **review-code-20261125-workbench** review distribution. It contains application
-and experiment implementations, not the manuscript's saved result tables or
-figures. See [release scope](docs/RELEASE_SCOPE.md) and
-[known limitations](docs/LIMITATIONS.md) before interpreting reproducibility claims.
+The [figure scripts and source data](figures/) cover Figures 2–5 and S3.
+The [All-200 inputs](battery_compute/AII_200_new/) contain the measured curves
+and aligned cell-level tables used by the benchmark. The earlier
+`review-code-20261125-workbench` tag records the code-only review distribution.
 
 ## Start here
 

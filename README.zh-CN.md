@@ -1,5 +1,7 @@
 # BATTWISE 代码审稿包
 
+[绘图脚本与源数据](figures/) 按图号排列。[All-200 实验输入](battery_compute/AII_200_new/) 包含 71 个电芯的曲线、参考曲线及按电芯编号对齐的统计与指标表。
+
 **Battery agentic triage and testing workflow with internal state evidence (BATTWISE)** 用充电曲线对退役电芯进行预分选，再对选定的组进行精分。First-200s 取充电开始后的 200 秒，All-200 从完整充电曲线均匀采样 200 对电流、电压值。
 
 ![用合成曲线演示退役电芯预分选与选定组精分](docs/media/retired-cell-sorting.gif)

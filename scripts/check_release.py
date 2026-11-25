@@ -19,6 +19,8 @@ PATTERNS = {
 def main() -> int:
     problems = []
     files = []
+    manifest = dict(line.split("  ", 1)[::-1] for line in
+                    (ROOT / "MANIFEST.sha256").read_text(encoding="utf-8").splitlines())
     for path in sorted(ROOT.rglob("*")):
         relative = path.relative_to(ROOT)
         if any(part in {".git", "__pycache__", ".pytest_cache", ".venv", ".venv-benchmark"} for part in relative.parts):
@@ -26,7 +28,11 @@ def main() -> int:
         if not path.is_file():
             continue
         files.append(relative.as_posix())
-        if path.suffix.lower() in DENIED_SUFFIXES or any(part in DENIED_PARTS for part in relative.parts):
+        source_data = (relative.parts[0] == "figures" or
+                       relative.parts[:2] == ("battery_compute", "AII_200_new"))
+        approved_data = (source_data and path.suffix.lower() in {".csv", ".xls", ".xlsx"}
+                         and manifest.get(relative.as_posix()) == hashlib.sha256(path.read_bytes()).hexdigest())
+        if (path.suffix.lower() in DENIED_SUFFIXES and not approved_data) or any(part in DENIED_PARTS for part in relative.parts):
             problems.append((relative.as_posix(), "excluded artifact type or directory"))
         if path.name.startswith(".env") and path.name != ".env.example":
             problems.append((relative.as_posix(), "runtime environment file"))
